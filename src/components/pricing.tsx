@@ -102,7 +102,7 @@ export default function Pricing() {
             >
               {plan.popular && (
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-foreground text-background text-xs font-bold uppercase tracking-widest shadow-lg">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-bold uppercase tracking-widest shadow-lg border border-primary/20">
                     <Star className="w-3 h-3 fill-current" /> Most Popular
                   </div>
                 </div>

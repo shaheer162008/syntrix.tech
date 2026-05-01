@@ -1,12 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GithubIcon } from "@/components/icons/mdi-github";
-import { LinkedinIcon } from "@/components/icons/mdi-linkedin";
-import { FacebookIcon } from "@/components/icons/mdi-facebook";
-import { InstagramIcon } from "@/components/icons/mdi-instagram";
-import { EmailIcon as Mail } from "@/components/icons/mdi-email";
-import { companyConfig } from "../../company.config"; // Using generic icon to replace specific social icons that might be missing
+import { companyConfig } from "../../company.config";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -44,81 +39,72 @@ export default function Footer() {
 
           {/* Column 2: Links */}
           <div className="space-y-6">
-            <h3 className="text-smfont-mono">Company</h3>
+            <h3 className="text-sm font-mono text-white">Company</h3>
             <ul className="space-y-4">
-              {['About Us', 'Careers', 'Our Work', 'Contact', 'Blog'].map((link, i) => (
-                <li key={i}>
-                  <Link href="#" className="text-sm font-medium text-foreground hover:text-white transition-colors">
-                    {link}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/about" className="text-sm font-medium text-foreground hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/our-work" className="text-sm font-medium text-foreground hover:text-white transition-colors">
+                  Our Work
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-sm font-medium text-foreground hover:text-white transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/our-work" className="text-sm font-medium text-foreground hover:text-white transition-colors">
+                  Our Work
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Column 3: Services */}
+          {/* Column 3: Legal */}
           <div className="space-y-6">
-            <h3 className="text-smfont-mono">Services</h3>
+            <h3 className="text-sm font-mono text-white">Legal</h3>
             <ul className="space-y-4">
-              {['Web Development', 'AI Automation', 'Mobile Apps', 'Branding', 'SEO & Marketing'].map((link, i) => (
-                <li key={i}>
-                  <Link href="#" className="text-sm font-medium text-foreground hover:text-white transition-colors">
-                    {link}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/terms-of-service" className="text-sm font-medium text-foreground hover:text-white transition-colors">
+                  Terms of Service
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Column 4: Legal & Social */}
+          {/* Column 4: Social */}
           <div className="space-y-6">
-            <h3 className="text-smfont-mono">Legal</h3>
-            <ul className="space-y-4 mb-8">
-              {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((link, i) => (
-                <li key={i}>
-                  <Link href="#" className="text-sm font-medium text-foreground hover:text-white transition-colors">
-                    {link}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <div className="flex gap-4 pt-4 mt-auto">
-              {companyConfig.socials.linkedin && (
-                <a href={companyConfig.socials.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-foreground hover:bg-white/10 text-white transition-all hover:scale-110 shadow-sm shrink-0">
-                  <LinkedinIcon size={20} />
-                </a>
-              )}
-              {companyConfig.socials.github && (
-                <a href={companyConfig.socials.github} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-foreground hover:bg-white/10 text-white transition-all hover:scale-110 shadow-sm shrink-0">
-                  <GithubIcon size={20} />
-                </a>
-              )}
-              {companyConfig.socials.facebook && (
-                <a href={companyConfig.socials.facebook} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-foreground hover:bg-white/10 text-white transition-all hover:scale-110 shadow-sm shrink-0">
-                  <FacebookIcon size={20} />
-                </a>
-              )}
-              {companyConfig.socials.instagram && (
-                <a href={companyConfig.socials.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-foreground hover:bg-white/10 text-white transition-all hover:scale-110 shadow-sm shrink-0">
-                  <InstagramIcon size={20} />
-                </a>
-              )}
-              {companyConfig.socials.email && (
-                <a href={companyConfig.socials.email} className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-foreground hover:bg-white/10 text-white transition-all hover:scale-110 shadow-sm shrink-0">
-                  <Mail size={20} />
-                </a>
-              )}
+            <h3 className="text-sm font-mono text-white">Connect</h3>
+            <div className="flex items-center gap-4 pt-2">
+              <a href={companyConfig.socials.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-black border border-white/10 flex items-center justify-center hover:bg-[#111] transition-all hover:scale-110 shadow-sm shrink-0">
+                <Image src="/icons/linkedin.svg" alt="LinkedIn" width={20} height={20} />
+              </a>
+              <a href={companyConfig.socials.github} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-black border border-white/10 flex items-center justify-center hover:bg-[#111] transition-all hover:scale-110 shadow-sm shrink-0">
+                <Image src="/icons/github.svg" alt="GitHub" width={20} height={20} />
+              </a>
+              <a href={companyConfig.socials.facebook} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-black border border-white/10 flex items-center justify-center hover:bg-[#111] transition-all hover:scale-110 shadow-sm shrink-0">
+                <Image src="/icons/facebook.svg" alt="Facebook" width={20} height={20} />
+              </a>
+              <a href={companyConfig.socials.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-black border border-white/10 flex items-center justify-center hover:bg-[#111] transition-all hover:scale-110 shadow-sm shrink-0">
+                <Image src="/icons/instagram.svg" alt="Instagram" width={20} height={20} />
+              </a>
+              <a href={companyConfig.socials.email} className="w-10 h-10 rounded-full bg-black border border-white/10 flex items-center justify-center hover:bg-[#111] transition-all hover:scale-110 shadow-sm shrink-0">
+                <Image src="/icons/email.svg" alt="Email" width={20} height={20} />
+              </a>
             </div>
           </div>
         </div>
 
         {/* Bottom Banner */}
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-mono">
+          <p className="font-mono text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} {companyConfig.name}. All rights reserved.
           </p>
-          <p className="font-mono">
+          <p className="font-mono text-sm text-muted-foreground">
             Developed By Team {companyConfig.name}
           </p>
         </div>

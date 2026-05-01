@@ -21,7 +21,6 @@ export default function Home() {
         <OurWork />
         <Testimonials />
         <Pricing />
-        <Contact />
         <CTA />
         <Footer />
       </GridBackground>

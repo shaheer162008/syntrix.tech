@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Rocket, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { companyConfig } from "../../company.config";
 
 export default function CTA() {
@@ -46,7 +47,7 @@ export default function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg sm:text-xl font-medium text-muted-foreground/90 max-w-2xl mb-10 font-mono leading-relaxed"
+              className="text-lg sm:text-xl font-medium text-white/90 max-w-2xl mb-10 font-mono leading-relaxed"
             >
               Join visionary brands growing with {companyConfig.name}. Let's build something extraordinary together. No commitments, just pure value.
             </motion.p>
@@ -58,12 +59,16 @@ export default function CTA() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
             >
-            <Button size="lg" className="rounded-full h-14 px-8 text-base font-bold bg-primary text-primary-foreground hover:bg-primary/90 group shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:scale-105 transition-all">
-              Book a Free Call
+            <Button size="lg" className="rounded-full h-14 px-8 text-base font-bold bg-primary text-white hover:bg-primary/90 group shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:scale-105 transition-all">
+              <Link href="/contact" className="text-primary-foreground no-underline">
+                Book a Free Call
+              </Link>
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button size="lg" variant="outline" className="rounded-full h-14 px-8 text-base font-bold border-white/10 hover:bg-white/5 group hover:scale-105 transition-all">
-              Explore Our Work
+              <Link href="/our-work" className="text-foreground no-underline">
+                Explore Our Work
+              </Link>
             </Button>
           </motion.div>
         </div>

@@ -26,7 +26,8 @@ export default function Hero(props: any) {
       { name: 'Packages', href: '/#packages' },
       { name: 'Our Work', href: '/our-work' },
       { name: 'About', href: '/about' },
-      { name: 'Contact', href: '/contact' },
+      { name: 'Get Started', href: '/contact' },
+      { name: 'Terms', href: '/terms-of-service' },
     ],
     loginText: "Sign In",
     loginHref: "/login",
@@ -38,8 +39,8 @@ export default function Hero(props: any) {
       linkHref: "/features/ai-assistant"
     },
     callToActions: props.callToActions || [
-      { text: "Get Free Consultation", href: "/signup", variant: "primary" as const },
-      { text: "View Our Work", href: "/demo", variant: "secondary" as const }
+      { text: "Get Free Consultation", href: "/contact", variant: "primary" as const },
+      { text: "View Our Work", href: "/our-work", variant: "secondary" as const }
     ],
     gradientColors: {
       from: "oklch(0.646 0.222 41.116)",
@@ -103,7 +104,7 @@ export default function Hero(props: any) {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-muted-foreground hover:text-foreground transition-colors"
+              className="-m-2.5 inline-flex items-center justify-center rounded-full p-2.5 text-muted-foreground hover:text-foreground transition-colors"
             >
               <span className="sr-only">Open main menu</span>
               <Menu aria-hidden="true" className="size-10" />
@@ -119,7 +120,7 @@ export default function Hero(props: any) {
             </div>
           )}
           <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-4">
-            <a href="/signup" className="rounded-full bg-primary px-7 py-3 text-lg font-medium text-primary-foreground shadow-sm hover:bg-primary/90 transition-colors">
+            <a href="/contact" className="rounded-full bg-primary px-7 py-3 text-lg font-medium text-primary-foreground shadow-sm hover:bg-primary/90 transition-colors">
               Get Started
             </a>
           </div>
@@ -137,7 +138,7 @@ export default function Hero(props: any) {
                 <button
                   type="button"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="-m-2.5 rounded-md p-2.5 text-muted-foreground hover:text-foreground transition-colors"
+                  className="-m-2.5 rounded-full p-2.5 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <span className="sr-only">Close menu</span>
                   <X aria-hidden="true" className="size-8" />
@@ -152,7 +153,7 @@ export default function Hero(props: any) {
                           key={item.name}
                           href={item.href}
                           onClick={() => setMobileMenuOpen(false)}
-                          className="-mx-3 block rounded-lg px-3 py-3 text-xl font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                          className="-mx-3 block rounded-full px-3 py-3 text-xl font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
                         >
                           {item.name}
                         </a>
@@ -161,9 +162,9 @@ export default function Hero(props: any) {
                   )}
                   <div className="py-6 mt-4">
                     <a
-                      href="/signup"
+                      href="/contact"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="-mx-3 flex items-center justify-center rounded-lg bg-primary px-3 py-4 text-xl font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+                      className="-mx-3 flex items-center justify-center rounded-full bg-primary px-3 py-4 text-xl font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
                     >
                       Get Started Free
                     </a>

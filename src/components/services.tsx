@@ -119,10 +119,10 @@ export function ServicesBentoGrid() {
               
               <CardHeader className="flex-1 p-6 relative z-10">
                 <div className="flex items-start justify-between mb-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-900 border border-white/10 group-hover:bg-white/10 group-hover:scale-110 transition-all duration-500 ease-out">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black border border-white/5 group-hover:bg-[#111] group-hover:scale-110 transition-all duration-500 ease-out">
                     {service.icon}
                   </div>
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 border border-white/10 opacity-0 -translate-x-4 translate-y-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500 ease-out">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black border border-white/5 opacity-0 -translate-x-4 translate-y-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500 ease-out">
                     <ArrowUpRight className="h-4 w-4 text-white/70" />
                   </div>
                 </div>

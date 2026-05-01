@@ -101,7 +101,7 @@ export default function Testimonials() {
               key={idx}
               variants={itemVariants}
               whileHover={{ y: -8 }}
-              className="group relative flex flex-col p-8 sm:p-10 rounded-[2.5rem] bg-card border border-white/5 isolate overflow-hidden transition-all duration-500 hover:border-primary/30 shadow-2xl"
+              className="group relative flex flex-col p-8 sm:p-10 rounded-[2.5rem] bg-card/60 backdrop-blur-sm border border-white/5 isolate overflow-hidden transition-all duration-500 hover:border-primary/20 shadow-2xl"
             >
               {/* Glassmorphic overlay effect on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />

@@ -47,10 +47,10 @@ const itemVariants: any = {
 
 // --- Helper Components for the Demo ---
 const IntegrationCard = () => (
-  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border-white/5 hover:border-white/20 transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer flex h-full flex-col font-sans">
+  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border border-white/5 hover:border-white/20 transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer flex h-full flex-col font-sans">
     <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
     <CardHeader className="relative z-10">
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900/50">
+      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-black border border-white/5">
         <span className="text-3xl" role="img" aria-label="sparkles">
           ✳️
         </span>
@@ -76,7 +76,7 @@ const IntegrationCard = () => (
 );
 
 const TrackersCard = () => (
-  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border-white/5 hover:border-white/20 transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer h-full font-sans">
+  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border border-white/5 hover:border-white/20 transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer h-full font-sans">
     <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
     <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
     <CardContent className="relative z-10 flex h-full flex-col justify-between p-6">
@@ -108,7 +108,7 @@ const TrackersCard = () => (
 );
 
 const FocusCard = () => (
-  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border-white/5 hover:border-white/20 transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer h-full font-sans">
+  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border border-white/5 hover:border-white/20 transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer h-full font-sans">
     <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
     <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
     <CardContent className="relative z-10 flex h-full flex-col justify-between p-6">
@@ -117,7 +117,7 @@ const FocusCard = () => (
           <CardTitle className="text-xl sm:text-2xl font-extrabold tracking-tighter">Focusing</CardTitle>
           <CardDescription className="font-mono text-sm text-muted-foreground">Productivity Analytics</CardDescription>
         </div>
-        <Badge variant="outline" className="border-orange-300 text-foreground font-sans whitespace-nowrap shrink-0">
+        <Badge variant="outline" className="border-white/10 text-foreground font-sans whitespace-nowrap shrink-0">
           Range Ratio
         </Badge>
       </div>
@@ -177,12 +177,12 @@ const ShortcutsCard = () => (
       </div>
       <div className="flex items-center gap-2">
         {/* Styled div replacing Kbd */}
-        <div className="flex h-7 w-7 items-center justify-center rounded-md border bg-background font-sans text-xs font-medium text-muted-foreground">
+        <div className="flex h-7 w-7 items-center justify-center rounded-full border border-white/5 bg-black font-sans text-xs font-medium text-muted-foreground">
           <Command className="h-3 w-3" />
         </div>
         <Plus className="h-3 w-3 text-muted-foreground" />
         {/* Styled div replacing Kbd */}
-        <div className="flex h-7 w-7 items-center justify-center rounded-md border bg-background font-sans text-xs font-medium text-muted-foreground">
+        <div className="flex h-7 w-7 items-center justify-center rounded-full border border-white/5 bg-black font-sans text-xs font-medium text-muted-foreground">
           M
         </div>
       </div>
