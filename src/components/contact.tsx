@@ -59,8 +59,8 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 sm:p-6 rounded-[2rem] bg-card/60 backdrop-blur-md border border-white/5 hover:border-white/10 transition-colors w-full">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-black border border-white/5 shrink-0">
+              <div className="flex items-center gap-4 p-4 sm:p-6 rounded-md bg-card/60 backdrop-blur-md border border-white/5 hover:border-white/10 transition-colors w-full">
+                <div className="flex items-center justify-center w-12 h-12 rounded-md bg-black border border-white/5 shrink-0">
                   <Phone className="w-5 h-5 text-foreground" />
                 </div>
                 <div className="overflow-hidden">
@@ -69,15 +69,26 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 sm:p-6 rounded-[2rem] bg-card/60 backdrop-blur-md border border-white/5 hover:border-white/10 transition-colors w-full">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-black border border-white/5 shrink-0">
+              <div className="flex items-center gap-4 p-4 sm:p-6 rounded-md bg-card/60 backdrop-blur-md border border-white/5 hover:border-white/10 transition-colors w-full">
+                <div className="flex items-center justify-center w-12 h-12 rounded-md bg-black border border-white/5 shrink-0">
                   <MapPin className="w-5 h-5 text-foreground" />
                 </div>
                 <div className="overflow-hidden">
-                  <p className="text-sm text-muted-foreground font-medium font-mono">Visit us remotely</p>
+                  <p className="text-sm text-muted-foreground font-medium font-mono">We are based in</p>
                   <p className="text-sm sm:text-base lg:text-lg font-semibold text-foreground truncate">{companyConfig.address}</p>
+                </div>          
+              </div>
+
+<div className="flex items-center gap-4 p-4 sm:p-6 rounded-[2rem] bg-card/60 backdrop-blur-md border border-white/5 hover:border-white/10 transition-colors w-full">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-black border border-white/5 shrink-0">
+                  <Mail className="w-5 h-5 text-foreground" />
+                </div>
+                <div className="overflow-hidden">
+                  <p className="text-sm text-muted-foreground font-medium font-mono">We Respond</p>
+                  <p className="text-sm sm:text-base lg:text-lg font-semibold text-foreground truncate">Within 24 hours via email/phone.</p>
                 </div>
               </div>
+
             </div>
           </motion.div>
 
@@ -97,17 +108,23 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-foreground">First Name</label>
-                    <Input placeholder="John" className="h-12 rounded-full bg-background/50 border-white/10 focus-visible:ring-foreground" />
+                    <Input placeholder="John" className="h-12 rounded-xl bg-background/50 border-white/10 focus-visible:ring-foreground" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-foreground">Last Name</label>
-                    <Input placeholder="Doe" className="h-12 rounded-full bg-background/50 border-white/10 focus-visible:ring-foreground" />
+                    <Input placeholder="Doe" className="h-12 rounded-xl bg-background/50 border-white/10 focus-visible:ring-foreground" />
                   </div>
                 </div>
 
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-foreground">Email Address</label>
-                  <Input type="email" placeholder="john@example.com" className="h-12 rounded-full bg-background/50 border-white/10 focus-visible:ring-foreground" />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-sm font-semibold text-foreground">Email Address</label>
+                    <Input type="email" placeholder="john@example.com" className="h-12 rounded-xl bg-background/50 border-white/10 focus-visible:ring-foreground" />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-semibold text-foreground">Phone Number</label>
+                    <Input type="tel" placeholder="+1 (555) 123-4567" className="h-12 rounded-xl bg-background/50 border-white/10 focus-visible:ring-foreground" />
+                  </div>
                 </div>
 
                 <div className="space-y-2">
@@ -116,6 +133,24 @@ export default function Contact() {
                     placeholder="Tell us about your project..." 
                     className="min-h-[120px] rounded-[2rem] bg-background/50 border-white/10 focus-visible:ring-foreground resize-none p-6"
                   />
+                </div>
+
+                <div className="bg-card/40 backdrop-blur-sm  p-6 mb-6">
+                  <h3 className="text-lg font-bold text-white mb-3">What happens next?</h3>
+                  <ul className="space-y-3 text-muted-foreground font-mono text-sm">
+                    <li className="flex items-start gap-3">
+                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 text-primary text-xs font-bold shrink-0 mt-0.5">1</span>
+                      <span>We'll contact you within 24 hours to schedule a <strong className="text-white">free consultation</strong></span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 text-primary text-xs font-bold shrink-0 mt-0.5">2</span>
+                      <span>We'll understand your needs and provide the <strong className="text-white">best solution</strong> for your business</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 text-primary text-xs font-bold shrink-0 mt-0.5">3</span>
+                      <span>We'll deliver exactly what works best for <strong className="text-white">your goals</strong></span>
+                    </li>
+                  </ul>
                 </div>
 
                 <Button className="w-full h-14 rounded-full font-bold text-base bg-foreground hover:bg-foreground/90 text-background transition-all group">
