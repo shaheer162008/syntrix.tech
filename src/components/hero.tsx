@@ -26,8 +26,6 @@ export default function Hero(props: any) {
       { name: 'Packages', href: '/#packages' },
       { name: 'Our Work', href: '/our-work' },
       { name: 'About', href: '/about' },
-      { name: 'Get Started', href: '/contact' },
-      { name: 'Terms', href: '/terms-of-service' },
     ],
     loginText: "Sign In",
     loginHref: "/login",
