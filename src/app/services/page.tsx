@@ -24,8 +24,8 @@ Move Your Business Forward."
         <Features />
         <ServicesImportance />
         <ServicesFaq />
-        <Footer />
       </GridBackground>
+      <Footer />
     </main>
   );
 }

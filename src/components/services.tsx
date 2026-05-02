@@ -13,18 +13,18 @@ import { Button } from "@/components/ui/button";
 import { 
   ArrowRight, 
   ArrowUpRight,
-  Laptop, 
-  Cpu, 
-  MessageSquareText, 
-  Palette, 
-  Megaphone, 
-  TrendingUp, 
-  Smartphone, 
-  Film 
+  Laptop,
+  Cpu,
+  MessageSquareText,
+  Palette,
+  Megaphone,
+  TrendingUp,
+  Smartphone,
+  Film,
 } from "lucide-react";
 import Link from "next/link";
 
-const containerVariants: any = {
+const containerVariants = {
   hidden: { opacity: 1 },
   visible: {
     opacity: 1,
@@ -52,50 +52,58 @@ const servicesList = [
   {
     title: "Website Development",
     description: "High-performance, responsive websites built to convert and scale your digital presence.",
-    icon: <Laptop className="h-6 w-6 text-foreground" />,
+    icon: <Laptop className="h-6 w-6 text-white" />,
     colSpan: "md:col-span-2 md:row-span-1",
+    slug: "website-development",
   },
   {
     title: "AI Automation Setup",
     description: "Automate repetitive tasks and streamline your operations with custom workflows.",
-    icon: <Cpu className="h-6 w-6 text-foreground" />,
+    icon: <Cpu className="h-6 w-6 text-white" />,
     colSpan: "md:col-span-1 md:row-span-1",
+    slug: "ai-automation",
   },
   {
     title: "AI Chatbots",
     description: "Integrate intelligent bots for 24/7 customer support and lead generation.",
-    icon: <MessageSquareText className="h-6 w-6 text-foreground" />,
+    icon: <img src="/icons/chatbot.svg" alt="Chatbot" className="h-8 w-8" />,
     colSpan: "md:col-span-1 md:row-span-1",
+    slug: "ai-chatbots",
   },
   {
     title: "Full Brand Creation",
     description: "Stand out with a modern, cohesive brand identity and logo design.",
-    icon: <Palette className="h-6 w-6 text-foreground" />,
+    icon: <img src="/icons/image.svg" alt="Brand Creation" className="h-8 w-8" />,
     colSpan: "md:col-span-1 md:row-span-1",
+    slug: "full-brand-creation",
   },
   {
     title: "Social Media Ads",
     description: "Targeted, high-ROI ad campaigns to drive immediate traffic and consistent leads.",
-    icon: <Megaphone className="h-6 w-6 text-foreground" />,
+    icon: <Megaphone className="h-6 w-6 text-white" />,
     colSpan: "md:col-span-2 md:row-span-1",
+    slug: "social-media-management",
   },
   {
     title: "SEO Optimization",
     description: "Dominate search rankings and earn valuable long-term organic traffic.",
-    icon: <TrendingUp className="h-6 w-6 text-foreground" />,
+    icon: <TrendingUp className="h-6 w-6 text-white" />,
     colSpan: "md:col-span-1 md:row-span-1",
+    slug: "seo-services",
   },
   {
     title: "Mobile App Dev",
     description: "Native and cross-platform mobile apps for seamless iOS and Android experiences.",
-    icon: <Smartphone className="h-6 w-6 text-foreground" />,
+    icon: <Smartphone className="h-6 w-6 text-white" />,
     colSpan: "md:col-span-2 md:row-span-1",
+    slug: "mobile-app-dev",
   },
   {
     title: "Motion Graphics",
     description: "Engaging video editing and dynamic animations to tell your brand story.",
-    icon: <Film className="h-6 w-6 text-foreground" />,
+    icon: <Film className="h-6 w-6 text-white" />,
     colSpan: "md:col-span-2 md:row-span-1",
+    slug: "motion-graphics",
   },
 ];
 
@@ -112,7 +120,7 @@ export function ServicesBentoGrid() {
           className={service.colSpan}
           whileHover={{ y: -8, scale: 1.01 }}
         >
-          <Link href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`} className="block h-full">
+          <Link href={`/services/${service.slug}`} className="block h-full">
             <Card className="relative rounded-[2rem] h-full flex flex-col font-sans group overflow-hidden bg-card/60 backdrop-blur-sm border-white/5 hover:border-white/20 transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer">
               {/* Subtle Gradient Glow effect on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out" />
@@ -126,10 +134,10 @@ export function ServicesBentoGrid() {
                     <ArrowUpRight className="h-4 w-4 text-white/70" />
                   </div>
                 </div>
-                <CardTitle className="text-xl sm:text-2xl font-mono font-extrabold tracking-tighter group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/70 transition-all duration-300">
+                <CardTitle className="text-xl sm:text-2xl font-mono font-extrabold tracking-tighter group-hover:text-primary transition-colors duration-300 text-white">
                   {service.title}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground/90 font-mono font-medium leading-relaxed mt-2 group-hover:text-muted-foreground transition-colors duration-300">
+                <CardDescription className="text-muted-foreground/90 font-mono font-medium leading-relaxed mt-2 group-hover:text-muted-foreground transition-colors duration-300 text-white/90">
                   {service.description}
                 </CardDescription>
               </CardHeader>
@@ -154,8 +162,8 @@ export default function Services({ hideViewAll = false }: { hideViewAll?: boolea
               transition={{ duration: 0.5 }}
               className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full bg-secondary/30 border border-white/10 backdrop-blur-md lg:mb-6"
             >
-              <Cpu className="w-4 h-4 text-foreground" />
-              <span className="text-xs font-semibold uppercase tracking-wider text-foreground font-sans">
+              <Cpu className="w-4 h-4 text-white" />
+              <span className="text-xs font-semibold uppercase tracking-wider text-white font-sans">
                 Expertise
               </span>
             </motion.div>
