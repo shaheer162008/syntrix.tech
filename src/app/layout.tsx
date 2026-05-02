@@ -4,6 +4,7 @@ import "@fontsource/geist-sans";
 import "@fontsource/geist-mono";
 import "./globals.css";
 import { homeMetadata } from "@/metadata";
+import { FloatingButtons } from "@/components/ui/floating-buttons";
 
 const neganFont = localFont({
   src: "../../public/font/Negan.otf",
@@ -22,7 +23,10 @@ export default function RootLayout({
       lang="en"
       className={`${neganFont.variable} font-sans h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col overflow-x-hidden bg-background text-foreground">{children}</body>
+      <body className="min-h-full flex flex-col overflow-x-hidden bg-background text-foreground">
+        {children}
+        <FloatingButtons />
+      </body>
     </html>
   );
 }

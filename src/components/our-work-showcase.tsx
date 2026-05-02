@@ -55,6 +55,7 @@ export default function OurWorkShowcase() {
                     src={project.image}
                     alt={project.title}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover transition-transform duration-[1.5s] ease-in-out group-hover:scale-105"
                   />
                   {/* Subtle blend overlay */}
