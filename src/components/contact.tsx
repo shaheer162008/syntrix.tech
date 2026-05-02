@@ -1,13 +1,60 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { MessageSquare, Mail, Phone, MapPin, Send } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { MessageSquare, Mail, Phone, MapPin, Send, X, CheckCircle2 } from "lucide-react";
 import { companyConfig } from "../../company.config";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useState, useEffect } from "react";
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [showToast, setShowToast] = useState(false);
+
+  // Auto-hide toast after 5 seconds
+  useEffect(() => {
+    if (showToast) {
+      const timer = setTimeout(() => setShowToast(false), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [showToast]);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    const formDta = new FormData(e.currentTarget);
+    const data = {
+      firstName: formDta.get("firstName") as string,
+      lastName: formDta.get("lastName") as string,
+      email: formDta.get("email") as string,
+      phone: formDta.get("phone") as string,
+      message: formDta.get("message") as string,
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setShowToast(true);
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
   return (
     <section className="relative w-full py-10 sm:py-16 md:py-24 bg-transparent font-sans z-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -74,19 +121,9 @@ export default function Contact() {
                   <MapPin className="w-5 h-5 text-foreground" />
                 </div>
                 <div className="overflow-hidden">
-                  <p className="text-sm text-muted-foreground font-medium font-mono">We are based in</p>
+                  <p className="text-sm text-muted-foreground font-medium font-mono">We're based in</p>
                   <p className="text-sm sm:text-base lg:text-lg font-semibold text-foreground truncate">{companyConfig.address}</p>
                 </div>          
-              </div>
-
-<div className="flex items-center gap-4 p-4 sm:p-6 rounded-[2rem] bg-card/60 backdrop-blur-md border border-white/5 hover:border-white/10 transition-colors w-full">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-black border border-white/5 shrink-0">
-                  <Mail className="w-5 h-5 text-foreground" />
-                </div>
-                <div className="overflow-hidden">
-                  <p className="text-sm text-muted-foreground font-medium font-mono">We Respond</p>
-                  <p className="text-sm sm:text-base lg:text-lg font-semibold text-foreground truncate">Within 24 hours via email/phone.</p>
-                </div>
               </div>
 
             </div>
@@ -103,35 +140,37 @@ export default function Contact() {
             {/* Soft decorative glow */}
 
             
-            <div className="relative bg-card/60 border border-white/10 rounded-[3rem] p-8 sm:p-10 backdrop-blur-xl shadow-2xl">
-              <form className="space-y-6">
+            <div className="relative bg-card/60 border border-white/10 rounded-[2rem] p-8 sm:p-10 backdrop-blur-xl">
+              <form className="space-y-5" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-foreground">First Name</label>
-                    <Input placeholder="John" className="h-12 rounded-xl bg-background/50 border-white/10 focus-visible:ring-foreground" />
+                    <Input name="firstName" placeholder="John" required className="h-11 rounded-[2rem] bg-background/50 border-white/10 focus-visible:ring-foreground" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-foreground">Last Name</label>
-                    <Input placeholder="Doe" className="h-12 rounded-xl bg-background/50 border-white/10 focus-visible:ring-foreground" />
+                    <Input name="lastName" placeholder="Doe" required className="h-11 rounded-[2rem] bg-background/50 border-white/10 focus-visible:ring-foreground" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-foreground">Email Address</label>
-                    <Input type="email" placeholder="john@example.com" className="h-12 rounded-xl bg-background/50 border-white/10 focus-visible:ring-foreground" />
+                    <Input name="email" type="email" placeholder="john@example.com" required className="h-11 rounded-md bg-background/50 border-white/10 focus-visible:ring-foreground" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-foreground">Phone Number</label>
-                    <Input type="tel" placeholder="+1 (555) 123-4567" className="h-12 rounded-xl bg-background/50 border-white/10 focus-visible:ring-foreground" />
+                    <Input name="phone" type="tel" placeholder="+1 (555) 123-4567" className="h-11 rounded-md bg-background/50 border-white/10 focus-visible:ring-foreground" />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-semibold text-foreground">How can we help?</label>
                   <Textarea 
+                    name="message"
                     placeholder="Tell us about your project..." 
-                    className="min-h-[120px] rounded-[2rem] bg-background/50 border-white/10 focus-visible:ring-foreground resize-none p-6"
+                    required
+                    className="min-h-[120px] rounded-[2rem] bg-background/50 border-white/10 focus-visible:ring-foreground resize-none p-4"
                   />
                 </div>
 
@@ -153,9 +192,13 @@ export default function Contact() {
                   </ul>
                 </div>
 
-                <Button className="w-full h-14 rounded-full font-bold text-base bg-foreground hover:bg-foreground/90 text-background transition-all group">
-                  Send Message
-                  <Send className="ml-2 w-5 h-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+                <Button 
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full h-14 rounded-[2rem] font-bold text-base bg-foreground hover:bg-foreground/90 text-background transition-all group disabled:opacity-50"
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {!isSubmitting && <Send className="ml-2 w-5 h-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />}
                 </Button>
               </form>
             </div>
@@ -163,6 +206,35 @@ export default function Contact() {
 
         </div>
       </div>
+
+      {/* Success Toast */}
+      <AnimatePresence>
+        {showToast && (
+          <motion.div
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.9 }}
+            transition={{ duration: 0.3 }}
+            className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-start gap-4 p-6 rounded-[2rem] bg-card border border-white/10 shadow-2xl min-w-[340px] max-w-[450px] backdrop-blur-xl"
+          >
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-green-500/20">
+              <CheckCircle2 className="w-6 h-6 text-green-400" />
+            </div>
+            <div className="flex-1 pr-6 pt-1">
+              <h4 className="text-lg font-bold text-white mb-1.5">Message Sent!</h4>
+              <p className="text-sm text-muted-foreground font-mono">
+                We've received your message and will contact you shortly.
+              </p>
+            </div>
+            <button
+              onClick={() => setShowToast(false)}
+              className="absolute top-4 right-4 p-2 rounded-full text-muted-foreground hover:text-white hover:bg-white/10 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
