@@ -1,4 +1,4 @@
-import Hero from "@/components/hero";
+import HomeHero from "@/components/home-hero";
 import Services from "@/components/services";
 import Features from "@/components/features";
 import AboutUs from "@/components/about-us";
@@ -13,7 +13,7 @@ import { GridBackground } from "@/components/ui/grid-background";
 export default function Home() {
   return (
     <main className="flex flex-col bg-background relative w-full overflow-x-hidden">
-      <Hero />
+      <HomeHero />
       <GridBackground>
         <Features />
         <Services />
