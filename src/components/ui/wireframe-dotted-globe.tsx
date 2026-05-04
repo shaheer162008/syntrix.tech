@@ -24,7 +24,7 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
     // Set up responsive dimensions
     const containerWidth = Math.min(width, window.innerWidth - 40);
     const containerHeight = Math.min(height, window.innerHeight - 100);
-    const radius = Math.min(containerWidth, containerHeight) / 1.8;
+    const radius = Math.min(containerWidth, containerHeight) / 2.5;
 
     const dpr = window.devicePixelRatio || 1;
     canvas.width = containerWidth * dpr;
@@ -266,7 +266,7 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
     const handleWheel = (event: WheelEvent) => {
       event.preventDefault();
       const scaleFactor = event.deltaY > 0 ? 0.9 : 1.1;
-      const newRadius = Math.max(radius * 0.8, Math.min(radius * 2, projection.scale() * scaleFactor));
+      const newRadius = Math.max(radius * 0.5, Math.min(radius * 3, projection.scale() * scaleFactor));
       projection.scale(newRadius);
       render();
     };
