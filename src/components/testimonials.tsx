@@ -37,7 +37,7 @@ const itemVariants: Variants = {
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="relative isolate w-full bg-transparent pt-10 sm:pt-16 pb-10 sm:pb-16 overflow-hidden font-sans z-10">
+    <section id="testimonials" className="relative isolate w-full bg-transparent pt-6 sm:pt-8 pb-10 sm:pb-16 overflow-hidden font-sans z-10">
       <div className="mx-auto px-6 md:px-12 max-w-[85rem] relative z-10">
         
         {/* Header */}
