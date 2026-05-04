@@ -70,7 +70,7 @@ export default function Pricing() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "0px" }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full bg-secondary/30 border border-white/10 backdrop-blur-md lg:mb-6"
+                className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full bg-secondary/30 border border-primary/20 bg-primary/5 backdrop-blur-md text-primary shadow-[0_0_15px_-5px_rgba(168,85,247,0.2)] lg:mb-6"
               >
                 <Gem className="w-4 h-4 text-foreground" />
                 <span className="text-xs font-semibold uppercase tracking-wider text-foreground font-sans">
@@ -78,7 +78,7 @@ export default function Pricing() {
                 </span>
               </motion.div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter text-foreground mb-4">
-                Transparent Pricing
+                Transparent <span className="text-primary">Pricing</span>
               </h2>
               <p className="text-lg sm:text-xl text-muted-foreground/90 font-medium text-balance font-mono">
                 Choose the perfect plan tailored to accelerate your business growth. No hidden fees, just value.
@@ -96,8 +96,8 @@ export default function Pricing() {
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className={`relative flex flex-col h-full rounded-[2.5rem] p-6 sm:p-8 md:p-10 transition-all duration-300 ${
                 plan.popular 
-                ? "bg-secondary/40 border border-white/20 shadow-[0_0_50px_-12px_rgba(255,255,255,0.1)] transform md:-translate-y-4" 
-                : "bg-card/40 border border-white/5 hover:border-white/10 hover:bg-card/60"
+                ? "bg-secondary/40 border border-primary/40 shadow-[0_0_40px_-5px_rgba(168,85,247,0.3)] bg-gradient-to-br from-primary/10 to-transparent transform md:-translate-y-4" 
+                : "bg-card/40 border border-primary/10 hover:border-primary/30 shadow-[0_0_20px_-5px_rgba(168,85,247,0.1)] bg-gradient-to-b from-primary/5 to-transparent hover:bg-card/60"
               } backdrop-blur-xl`}
             >
               {plan.popular && (
@@ -110,7 +110,7 @@ export default function Pricing() {
 
               <div className="mb-8">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-foreground">{plan.name}</h3>
+                  <h3 className="text-xl font-bold text-foreground">{plan.name.split(" ").length > 1 ? <>{plan.name.split(" ")[0]} <span className="text-primary">{plan.name.split(" ").slice(1).join(" ")}</span></> : plan.name}</h3>
 
                 </div>
                 <p className="text-sm text-muted-foreground/90 font-mono min-h-[3rem]">

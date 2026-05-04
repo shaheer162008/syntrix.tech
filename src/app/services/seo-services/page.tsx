@@ -13,7 +13,7 @@ export default function SEOServicesPage() {
   return (
     <main className="flex flex-col bg-background relative w-full overflow-x-hidden">
       <Hero 
-        title="SEO Services"
+        title={<>SEO <span className="text-primary">Services</span></>}
         description="Rank higher, get found by customers, and drive qualified organic traffic that converts."
         announcementBanner={{ text: "SEO & Growth", linkText: "", linkHref: "#" }}
       />

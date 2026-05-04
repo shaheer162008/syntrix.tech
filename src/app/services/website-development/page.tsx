@@ -13,7 +13,7 @@ export default function WebsiteDevelopmentPage() {
   return (
     <main className="flex flex-col bg-background relative w-full overflow-x-hidden">
       <Hero 
-        title="Website Development"
+        title={<>Website <span className="text-primary">Development</span></>}
         description="Custom websites built with modern technologies that don't just look good - they drive real business growth."
         announcementBanner={{ text: "Web Development", linkText: "", linkHref: "#" }}
       />

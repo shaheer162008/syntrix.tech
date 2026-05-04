@@ -13,7 +13,7 @@ export default function FullBrandCreationPage() {
   return (
     <main className="flex flex-col bg-background relative w-full overflow-x-hidden">
       <Hero 
-        title="Full Brand Creation"
+        title={<>Full <span className="text-primary">Brand Creation</span></>}
         description="Build a memorable brand identity that connects with your audience and sets you apart from competitors."
         announcementBanner={{ text: "Branding", linkText: "", linkHref: "#" }}
       />

@@ -14,8 +14,7 @@ export default function ServicesPage() {
   return (
     <main className="flex flex-col bg-background relative w-full overflow-x-hidden border-white/5">
       <Hero 
-        title="Smart Services That
-Move Your Business Forward." 
+        title={<>Smart Services That Move Your <span className="text-primary">Business Forward.</span></>} 
         description="Web design, workflow automation, organic growth, and AI systems built around your goals, not generic templates."
         announcementBanner={{ text: "Fuel Your Growth", linkText: "", linkHref: "#" }}
       />

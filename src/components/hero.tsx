@@ -29,7 +29,7 @@ export default function Hero(props: any) {
     ],
     loginText: "Sign In",
     loginHref: "/login",
-    title: props.title || `Make Your Business Work Smarter with ${companyConfig.name}`,
+    title: props.title || <>Make Your Business Work <span className="text-primary">Smarter</span> with <span className="text-primary">{companyConfig.name}</span></>,
     description: props.description || "We build websites, automate workflows, and help brands grow organically through AI driven systems designed for real results.",
     announcementBanner: props.announcementBanner || {
       text: "Trusted by 50+ clients",
@@ -95,7 +95,7 @@ export default function Hero(props: any) {
         <nav aria-label="Global" className="flex items-center justify-between p-4 sm:p-6 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2 group">
-              <span className="font-negan text-3xl font-normal lowercase tracking-wide">nexiler</span>
+              <span className="font-negan text-3xl font-normal lowercase tracking-wide text-[#a855f7] drop-shadow-[0_0_8px_rgba(168,85,247,0.5)]">nexiler</span>
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -131,7 +131,7 @@ export default function Hero(props: any) {
             <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background/95 backdrop-blur-xl px-4 py-4 sm:px-6 sm:py-6 sm:max-w-sm sm:ring-1 sm:ring-border">
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">     
-                  <span className="font-negan text-3xl font-normal lowercase tracking-wide">nexiler</span>
+                  <span className="font-negan text-3xl font-normal lowercase tracking-wide text-[#a855f7] drop-shadow-[0_0_8px_rgba(168,85,247,0.5)]">nexiler</span>
                 </a>
                 <button
                   type="button"
@@ -181,9 +181,9 @@ export default function Hero(props: any) {
           {/* CUSTOMIZED BADGE (Announcement Banner) */}
           {announcementBanner && (
             <div className="mb-8 flex justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 ease-out">
-              <div className="relative flex items-center gap-x-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm leading-6 text-foreground shadow-sm hover:border-primary/40 hover:bg-primary/10 transition-all cursor-pointer backdrop-blur-md">
-                <Sparkles className="h-4 w-4 text-primary" />
-                <span className="font-semibold text-primary">{announcementBanner.text}</span>
+              <div className="relative flex items-center gap-x-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm leading-6 text-foreground shadow-sm hover:border-white/20 hover:bg-white/10 transition-all cursor-pointer backdrop-blur-md">
+                <Sparkles className="h-4 w-4 text-white" />
+                <span className="font-semibold text-white">{announcementBanner.text}</span>
                 <span className="text-muted-foreground hidden sm:inline-block">|</span>
                 <a href={announcementBanner.linkHref} className="font-medium hover:text-primary transition-colors flex items-center gap-1 group">
                   <span aria-hidden="true" className="absolute inset-0" />

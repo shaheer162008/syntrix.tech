@@ -13,7 +13,7 @@ export default function MobileAppDevPage() {
   return (
     <main className="flex flex-col bg-background relative w-full overflow-x-hidden">
       <Hero 
-        title="Mobile App Development"
+        title={<>Mobile <span className="text-primary">App Development</span></>}
         description="Build native and cross-platform mobile apps that deliver seamless experiences on iOS and Android."
         announcementBanner={{ text: "Mobile Apps", linkText: "", linkHref: "#" }}
       />

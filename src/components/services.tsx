@@ -121,21 +121,21 @@ export function ServicesBentoGrid() {
           whileHover={{ y: -8, scale: 1.01 }}
         >
           <Link href={`/services/${service.slug}`} className="block h-full">
-            <Card className="relative rounded-[2rem] h-full flex flex-col font-sans group overflow-hidden bg-card/60 backdrop-blur-sm border-white/5 hover:border-white/20 transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer">
+            <Card className="relative rounded-[2rem] h-full flex flex-col font-sans group overflow-hidden bg-card/60 backdrop-blur-sm border-primary/10 shadow-[0_0_15px_-5px_rgba(168,85,247,0.1)] bg-gradient-to-b from-primary/5 to-transparent hover:border-primary/60 transition-all duration-500 ease-out  hover:shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)] cursor-pointer">
               {/* Subtle Gradient Glow effect on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out" />
               
               <CardHeader className="flex-1 p-6 relative z-10">
                 <div className="flex items-start justify-between mb-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black border border-white/5 group-hover:bg-[#111] group-hover:scale-110 transition-all duration-500 ease-out">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black border border-primary/10 shadow-[0_0_15px_-5px_rgba(168,85,247,0.1)] bg-gradient-to-b from-primary/5 to-transparent group-hover:bg-primary/20 group-hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:scale-110 transition-all duration-500 ease-out">
                     {service.icon}
                   </div>
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black border border-white/5 opacity-0 -translate-x-4 translate-y-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500 ease-out">
-                    <ArrowUpRight className="h-4 w-4 text-white/70" />
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black border border-primary/10 shadow-[0_0_15px_-5px_rgba(168,85,247,0.1)] bg-gradient-to-b from-primary/5 to-transparent opacity-0 -translate-x-4 translate-y-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500 ease-out">
+                    <ArrowUpRight className="h-4 w-4 text-primary" />
                   </div>
                 </div>
-                <CardTitle className="text-xl sm:text-2xl font-mono font-extrabold tracking-tighter group-hover:text-primary transition-colors duration-300 text-white">
-                  {service.title}
+                <CardTitle className="text-xl sm:text-2xl font-mono font-extrabold tracking-tighter text-white group-hover:text-primary drop-shadow-[0_0_2px_rgba(168,85,247,0.3)] transition-colors duration-300">
+                  {service.title.split(" ").length > 1 ? <>{service.title.split(" ").slice(0, -1).join(" ")} <span className="text-primary">{service.title.split(" ").slice(-1)}</span></> : service.title}
                 </CardTitle>
                 <CardDescription className="text-muted-foreground/90 font-mono font-medium leading-relaxed mt-2 group-hover:text-muted-foreground transition-colors duration-300 text-white/90">
                   {service.description}
@@ -168,7 +168,7 @@ export default function Services({ hideViewAll = false }: { hideViewAll?: boolea
               </span>
             </motion.div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter text-foreground mb-4">
-              Our Services
+              Our <span className="text-primary">Services</span>
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground/90 font-medium text-balance font-mono">
               End-to-end digital solutions designed to elevate your brand, automate your workflows, and drive measurable ROI.

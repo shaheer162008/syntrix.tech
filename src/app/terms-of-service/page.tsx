@@ -12,7 +12,7 @@ export default function TermsOfService() {
   return (
     <main className="flex flex-col bg-background relative w-full overflow-x-hidden">
       <Hero
-        title="Terms of Service"
+        title={<>Terms <span className="text-primary">of Service</span></>}
         description="Legal agreement and terms of service for Nexiler. We build honest partnerships that drive real results for your business."
         announcementBanner={{ text: "Legal", linkText: "", linkHref: "#" }}
       />

@@ -47,19 +47,23 @@ export const ServicesFaq = ({
     <section className="pt-8 sm:pt-12 pb-16 sm:pb-24 relative z-20 font-sans">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto">
-          <Badge variant="secondary" className="px-4 py-1.5 rounded-full bg-secondary/30 border border-white/10 text-xs font-semibold uppercase tracking-wider text-foreground font-sans">
+          <Badge variant="secondary" className="px-4 py-1.5 rounded-full bg-secondary/30 border border-white/10 text-xs font-semibold uppercase tracking-wider text-primary font-sans drop-shadow-[0_0_2px_rgba(168,85,247,0.3)]">
             {badge}
           </Badge>
           <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter text-foreground">
-            {heading}
+            {heading.split(' ').map((word, i) => 
+              ['Answers', 'Questions', '&'].includes(word) ? 
+                <span key={i} className="text-primary">{word} </span> : 
+                <span key={i}>{word} </span>
+            )}
           </h2>
           <p className="mt-6 text-lg sm:text-xl text-muted-foreground/90 font-medium font-mono">
             {description}
           </p>
         </div>
-        <div className="mx-auto mt-14 max-w-3xl">
+        <div className="mx-auto mt-14 max-w-3xl space-y-8">
           {faqs.map((faq, index) => (
-            <div key={index} className="mb-8 flex gap-4 sm:gap-6 bg-card/40 border border-white/5 p-6 sm:p-8 rounded-[2rem] backdrop-blur-sm transition-all hover:bg-card/60 hover:border-white/10 hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.05)]">
+            <div key={index} className="flex gap-4 sm:gap-6 bg-card/40 border border-white/5 p-6 sm:p-8 rounded-[2rem] backdrop-blur-sm transition-all hover:bg-card/60 hover:border-white/10 hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.05)]">
               <span className="flex size-10 sm:size-12 shrink-0 items-center justify-center rounded-full bg-white/5 font-sans font-semibold text-lg text-foreground/60 border border-white/10 shadow-inner">
                 {String(index + 1).padStart(2, '0')}
               </span>

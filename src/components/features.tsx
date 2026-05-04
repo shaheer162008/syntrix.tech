@@ -47,13 +47,13 @@ const itemVariants: any = {
 
 // --- Real Company Feature Cards ---
 const FastDeliveryCard = () => (
-  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border border-white/5 hover:border-white/20 transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer flex h-full flex-col font-sans">
-    <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
+  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border border-primary/10 hover:border-primary/40 transition-all duration-500 ease-out shadow-[0_0_15px_-5px_rgba(168,85,247,0.1)] hover:shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)] bg-gradient-to-b from-primary/5 to-transparent cursor-pointer flex h-full flex-col font-sans">
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
     <CardHeader className="relative z-10">
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-black border border-white/5">
-        <Zap className="h-6 w-6 text-white" />
+      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md shadow-[0_0_10px_rgba(168,85,247,0.2)] group-hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-300">
+        <Zap className="h-6 w-6 text-primary" />
       </div>
-      <CardTitle className="text-xl sm:text-2xl font-extrabold tracking-tighter text-white">Fast Delivery</CardTitle>
+      <CardTitle className="text-xl sm:text-2xl font-extrabold tracking-tighter text-white">Fast <span className="text-primary">Delivery</span></CardTitle>
       <CardDescription className="font-mono text-sm text-white/90">
         Quick turnaround times without compromising quality. Get your projects delivered faster with our streamlined workflow.
       </CardDescription>
@@ -62,13 +62,13 @@ const FastDeliveryCard = () => (
 );
 
 const SupportCard = () => (
-  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border border-white/5 hover:border-white/20 transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer h-full font-sans">
-    <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
+  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border border-primary/10 hover:border-primary/40 transition-all duration-500 ease-out shadow-[0_0_15px_-5px_rgba(168,85,247,0.1)] hover:shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)] bg-gradient-to-b from-primary/5 to-transparent cursor-pointer h-full font-sans">
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
     <CardContent className="relative z-10 flex h-full flex-col justify-between p-6">
       <div>
         <div className="flex items-start justify-between mb-4">
           <div>
-            <CardTitle className="text-xl sm:text-2xl font-extrabold tracking-tighter text-white">24/7 Support</CardTitle>
+            <CardTitle className="text-xl sm:text-2xl font-extrabold tracking-tighter text-white">24/7 <span className="text-primary">Support</span></CardTitle>
             <CardDescription className="font-mono text-sm text-white/90">Always Available</CardDescription>
           </div>
           <Badge variant="outline" className="border-white/10 text-white font-sans whitespace-nowrap shrink-0">
@@ -88,11 +88,11 @@ const SupportCard = () => (
 );
 
 const CustomSolutionsCard = () => (
-  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border border-white/5 hover:border-white/20 transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer h-full font-sans">
-    <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
+  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border border-primary/10 hover:border-primary/40 transition-all duration-500 ease-out shadow-[0_0_15px_-5px_rgba(168,85,247,0.1)] hover:shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)] bg-gradient-to-b from-primary/5 to-transparent cursor-pointer h-full font-sans">
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
     <CardContent className="relative z-10 flex h-full flex-col justify-end p-6">
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-black border border-white/5">
-        <Code2 className="h-6 w-6 text-white" />
+      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md shadow-[0_0_10px_rgba(168,85,247,0.2)] group-hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-300">
+        <Code2 className="h-6 w-6 text-primary" />
       </div>
       <CardTitle className="text-xl sm:text-2xl font-extrabold tracking-tighter text-white mb-2">
         Custom Solutions
@@ -113,7 +113,7 @@ const ROICard = () => (
         backgroundSize: "16px 16px",
       }}
     />
-    <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
     <CardContent className="relative z-10 flex h-full items-center justify-center p-6">
       <span className="text-7xl font-extrabold text-white/90 tracking-tighter">ROI</span>
     </CardContent>
@@ -121,14 +121,14 @@ const ROICard = () => (
 );
 
 const ModernTechCard = () => (
-  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border border-white/5 hover:border-white/20 transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer h-full font-sans">
-    <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
+  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border border-primary/10 hover:border-primary/40 transition-all duration-500 ease-out shadow-[0_0_15px_-5px_rgba(168,85,247,0.1)] hover:shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)] bg-gradient-to-b from-primary/5 to-transparent cursor-pointer h-full font-sans">
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
     <CardContent className="relative z-10 flex h-full flex-wrap items-center justify-between gap-4 p-6">
       <div className="space-y-2">
-        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-black border border-white/5">
-          <Layers className="h-6 w-6 text-white" />
+        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md shadow-[0_0_10px_rgba(168,85,247,0.2)] group-hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-300">
+          <Layers className="h-6 w-6 text-primary" />
         </div>
-        <CardTitle className="text-xl sm:text-2xl font-extrabold tracking-tighter text-white">Modern Tech Stack</CardTitle>
+        <CardTitle className="text-xl sm:text-2xl font-extrabold tracking-tighter text-white">Modern <span className="text-primary">Tech Stack</span></CardTitle>
         <CardDescription className="font-mono text-sm text-white/90">
           Latest technologies and frameworks for optimal performance.
         </CardDescription>
@@ -138,13 +138,13 @@ const ModernTechCard = () => (
 );
 
 const DedicatedManagerCard = () => (
-  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border border-white/5 hover:border-white/20 transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer flex h-full flex-col font-sans">
-    <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
+  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border border-primary/10 hover:border-primary/40 transition-all duration-500 ease-out shadow-[0_0_15px_-5px_rgba(168,85,247,0.1)] hover:shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)] bg-gradient-to-b from-primary/5 to-transparent cursor-pointer flex h-full flex-col font-sans">
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
     <CardHeader className="relative z-10">
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-black border border-white/5">
-        <Users className="h-6 w-6 text-white" />
+      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md shadow-[0_0_10px_rgba(168,85,247,0.2)] group-hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-300">
+        <Users className="h-6 w-6 text-primary" />
       </div>
-      <CardTitle className="text-xl sm:text-2xl font-extrabold tracking-tighter text-white">Dedicated Manager</CardTitle>
+      <CardTitle className="text-xl sm:text-2xl font-extrabold tracking-tighter text-white">Dedicated <span className="text-primary">Manager</span></CardTitle>
       <CardDescription className="font-mono text-sm text-white/90">
         Your personal project manager ensures seamless communication and on-time delivery.
       </CardDescription>
@@ -153,23 +153,23 @@ const DedicatedManagerCard = () => (
 );
 
 const ScalableCard = () => (
-  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border border-white/5 hover:border-white/20 transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer h-full font-sans">
-    <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
+  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border border-primary/10 hover:border-primary/40 transition-all duration-500 ease-out shadow-[0_0_15px_-5px_rgba(168,85,247,0.1)] hover:shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)] bg-gradient-to-b from-primary/5 to-transparent cursor-pointer h-full font-sans">
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
     <CardContent className="relative z-10 flex h-full flex-col justify-between p-6">
       <div>
         <CardTitle className="text-xl sm:text-2xl font-extrabold tracking-tighter text-white">
-          Scalable Solutions
+          Scalable <span className="text-primary">Solutions</span>
         </CardTitle>
         <CardDescription className="font-mono text-sm text-white/90 mt-2">Grows with You</CardDescription>
       </div>
       <div className="flex -space-x-2 overflow-hidden mt-4">
-        <div className="inline-block h-8 w-8 rounded-full ring-2 ring-background bg-black border border-white/5 flex items-center justify-center">
+        <div className="inline-block h-8 w-8 rounded-full ring-2 ring-background bg-primary/10 border border-primary/20 backdrop-blur-md shadow-[0_0_10px_rgba(168,85,247,0.2)] group-hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-300 flex items-center justify-center">
           <span className="text-xs text-white">S</span>
         </div>
-        <div className="inline-block h-8 w-8 rounded-full ring-2 ring-background bg-black border border-white/5 flex items-center justify-center">
+        <div className="inline-block h-8 w-8 rounded-full ring-2 ring-background bg-primary/10 border border-primary/20 backdrop-blur-md shadow-[0_0_10px_rgba(168,85,247,0.2)] group-hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-300 flex items-center justify-center">
           <span className="text-xs text-white">M</span>
         </div>
-        <div className="inline-block h-8 w-8 rounded-full ring-2 ring-background bg-black border border-white/5 flex items-center justify-center">
+        <div className="inline-block h-8 w-8 rounded-full ring-2 ring-background bg-primary/10 border border-primary/20 backdrop-blur-md shadow-[0_0_10px_rgba(168,85,247,0.2)] group-hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-300 flex items-center justify-center">
           <span className="text-xs text-white">L</span>
         </div>
       </div>
@@ -178,14 +178,14 @@ const ScalableCard = () => (
 );
 
 const TransparentPricingCard = () => (
-  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border border-white/5 hover:border-white/20 transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer h-full font-sans">
-    <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
+  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border border-primary/10 hover:border-primary/40 transition-all duration-500 ease-out shadow-[0_0_15px_-5px_rgba(168,85,247,0.1)] hover:shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)] bg-gradient-to-b from-primary/5 to-transparent cursor-pointer h-full font-sans">
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
     <CardContent className="relative z-10 flex h-full flex-wrap items-center justify-between gap-4 p-6">
       <div className="space-y-2">
-        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-black border border-white/5">
-          <DollarSign className="h-6 w-6 text-white" />
+        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md shadow-[0_0_10px_rgba(168,85,247,0.2)] group-hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-300">
+          <DollarSign className="h-6 w-6 text-primary" />
         </div>
-        <CardTitle className="text-xl sm:text-2xl font-extrabold tracking-tighter text-white">Transparent Pricing</CardTitle>
+        <CardTitle className="text-xl sm:text-2xl font-extrabold tracking-tighter text-white">Transparent <span className="text-primary">Pricing</span></CardTitle>
         <CardDescription className="font-mono text-sm text-white/90">
           No hidden costs. Clear, upfront pricing for all services.
         </CardDescription>
@@ -266,7 +266,7 @@ export default function Features() {
               </span>
             </motion.div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter text-white mb-4">
-              Our Core Features
+              Our Core <span className="text-primary">Features</span>
             </h2>
             <p className="text-lg sm:text-xl text-white/90 font-medium text-balance font-mono">
               Experience the difference with our premium features designed for your success

@@ -13,7 +13,7 @@ export default function OurWork({ hideViewMore }: { hideViewMore?: boolean }) {
   return (
     <section
       id="our-work"
-      className="relative py-16 sm:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden font-sans"
+      className="relative pt-16 sm:pt-28 pb-8 sm:pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden font-sans"
     >
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
@@ -34,7 +34,7 @@ export default function OurWork({ hideViewMore }: { hideViewMore?: boolean }) {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground mb-6 leading-tight tracking-tighter"
           >
             Projects We&apos;ve{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">Delivered</span>
+            <span className="text-primary">Delivered</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -104,7 +104,7 @@ export default function OurWork({ hideViewMore }: { hideViewMore?: boolean }) {
                     {project.category}
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors duration-300 tracking-tight">
+                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary drop-shadow-[0_0_4px_rgba(168,85,247,0.2)] transition-colors duration-300 tracking-tight">
                   {project.title}
                 </h3>
                 <p className="text-muted-foreground font-mono text-sm leading-relaxed line-clamp-2">

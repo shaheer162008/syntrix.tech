@@ -76,7 +76,7 @@ export default function Contact() {
             </motion.div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter text-foreground mb-4">
-              Let's craft your success story.
+              Let's create your <span className="text-primary">success story.</span>
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground/90 font-medium text-balance font-mono leading-relaxed">
               Whether you have a question, a project idea, or just want to say hi, we're here to help you navigate the digital landscape.

@@ -13,7 +13,7 @@ export default function ContactPage() {
   return (
     <main className="flex flex-col bg-background relative w-full overflow-x-hidden">
       <Hero 
-        title="Get in Touch"
+        title={<>Get <span className="text-primary">in Touch</span></>}
         description="Ready to transform your digital presence? Let's discuss how we can help your business grow."
         announcementBanner={{ text: "Contact Us", linkText: "", linkHref: "#" }}
       />

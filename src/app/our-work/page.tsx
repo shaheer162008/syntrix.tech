@@ -22,7 +22,7 @@ export default function OurWorkPage() {
   return (
     <div className="min-h-screen bg-background">
       <Hero 
-        title="Real Projects. Real Results. No Fluff." 
+        title={<>Real Projects. Real Results. <span className="text-primary">No Fluff.</span></>} 
         description="Browse our work across web design, automation, brand growth, and AI — every project built to deliver measurable outcomes."
         announcementBanner={{ text: "View featured case studies", linkText: "", linkHref: "#" }}
       />
@@ -62,7 +62,7 @@ export default function OurWorkPage() {
               {featuredProjects.map((project, i) => (
                 <div
                   key={project.id}
-                  className={`group grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-[2rem] overflow-hidden transition-all duration-500 hover:scale-[1.01] bg-card/60 backdrop-blur-sm border border-white/5 hover:border-white/20 ${
+                  className={`group grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-[2rem] overflow-hidden transition-all duration-500 hover:scale-[1.01] bg-card/60 backdrop-blur-sm border border-white/5 hover:border-primary/50  hover:shadow-[0_0_40px_-10px_rgba(168,85,247,0.4)] ${
                     i % 2 === 1 ? 'lg:direction-rtl' : ''
                   }`}
                 >
@@ -92,12 +92,12 @@ export default function OurWorkPage() {
                         {project.category}
                       </span>
                       <span
-                        className="px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-primary/10 text-white border border-primary/20 backdrop-blur-md flex items-center gap-1"
+                        className="px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-primary/10 text-white border border-white/5 backdrop-blur-md flex items-center gap-1"
                       >
                         <FiStar size={10} className="text-primary" /> Featured
                       </span>
                     </div>
-                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 group-hover:text-primary transition-colors duration-300 drop-shadow-[0_0_4px_rgba(168,85,247,0.2)]">
                       {project.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed mb-6">
@@ -161,7 +161,7 @@ export default function OurWorkPage() {
               {filtered.map((project) => (
                 <div
                   key={project.id}
-                  className="group relative rounded-[2rem] overflow-hidden bg-card/60 backdrop-blur-sm border border-white/5 hover:border-white/20 transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer"
+                  className="group relative rounded-[2rem] overflow-hidden bg-card/60 backdrop-blur-sm border border-white/5 hover:border-primary/50  hover:shadow-[0_0_40px_-10px_rgba(168,85,247,0.4)] transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer"
                 >
                   {/* Image */}
                   <div className="relative w-full aspect-video overflow-hidden rounded-[2.5rem]">
@@ -201,13 +201,13 @@ export default function OurWorkPage() {
                       </span>
                       {project.featured && (
                         <span
-                          className="px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-primary/10 text-white border border-primary/20 backdrop-blur-md"
+                          className="px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-primary/10 text-white border border-white/5 backdrop-blur-md"
                         >
                           Featured
                         </span>
                       )}
                     </div>
-                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors duration-300 drop-shadow-[0_0_4px_rgba(168,85,247,0.2)]">
                       {project.title}
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">

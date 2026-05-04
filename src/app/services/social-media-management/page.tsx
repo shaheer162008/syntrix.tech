@@ -13,7 +13,7 @@ export default function SocialMediaPage() {
   return (
     <main className="flex flex-col bg-background relative w-full overflow-x-hidden">
       <Hero 
-        title="Social Media Management"
+        title={<>Social <span className="text-primary">Media Management</span></>}
         description="Build a brand that people remember. We create content, manage communities, and drive organic growth."
         announcementBanner={{ text: "Social Growth", linkText: "", linkHref: "#" }}
       />

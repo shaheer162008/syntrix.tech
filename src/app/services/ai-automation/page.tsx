@@ -13,7 +13,7 @@ export default function AIAutomationPage() {
   return (
     <main className="flex flex-col bg-background relative w-full overflow-x-hidden">
       <Hero 
-        title="AI Automation"
+        title={<>AI <span className="text-primary">Automation</span></>}
         description="Transform your business with intelligent workflows that save time, reduce errors, and let your team focus on what matters most."
         announcementBanner={{ text: "AI Solutions", linkText: "", linkHref: "#" }}
       />

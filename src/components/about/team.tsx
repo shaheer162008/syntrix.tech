@@ -70,7 +70,7 @@ export function AboutTeam() {
               </div>
               
               <div className="flex flex-col items-center w-full text-center">
-                <h3 className="text-xl font-extrabold tracking-tight mb-1 font-sans text-center text-white drop-shadow-lg">{member.name}</h3>
+                <h3 className="text-xl font-extrabold tracking-tight mb-1 font-sans text-center text-primary drop-shadow-lg">{member.name}</h3>
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2 font-sans text-center">{member.role}</p>
                 <p className="text-center text-sm text-muted-foreground font-mono mb-5 line-clamp-3 max-w-[90%] mx-auto leading-relaxed">
                   {member.description}

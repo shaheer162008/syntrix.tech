@@ -13,7 +13,7 @@ export default function ContentCreationPage() {
   return (
     <main className="flex flex-col bg-background relative w-full overflow-x-hidden">
       <Hero 
-        title="Content Creation"
+        title={<>Content <span className="text-primary">Creation</span></>}
         description="Stop struggling with content. We create videos, graphics, and copy that tells your brand story and converts visitors."
         announcementBanner={{ text: "Creative Services", linkText: "", linkHref: "#" }}
       />

@@ -24,7 +24,7 @@ export default function Footer() {
               transition={{ duration: 0.5 }}
             >
               <Link href="/" className="inline-block group">
-                <span className="font-negan text-3xl font-normal lowercase tracking-wide group-hover:opacity-80 transition-opacity text-white">nexiler</span>
+                <span className="font-negan text-3xl font-normal lowercase tracking-wide text-[#a855f7] drop-shadow-[0_0_8px_rgba(168,85,247,0.5)]">nexiler</span>
               </Link>
               <p className="mt-6 text-sm text-foreground font-medium leading-relaxed max-w-xs">
                 Empowering businesses with intelligent automation, stunning websites, and relentless performance.

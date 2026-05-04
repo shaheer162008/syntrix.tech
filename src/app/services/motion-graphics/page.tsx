@@ -13,7 +13,7 @@ export default function MotionGraphicsPage() {
   return (
     <main className="flex flex-col bg-background relative w-full overflow-x-hidden">
       <Hero 
-        title="Motion Graphics"
+        title={<>Motion <span className="text-primary">Graphics</span></>}
         description="Captivate your audience with engaging video content and dynamic animations that tell your brand story."
         announcementBanner={{ text: "Video & Animation", linkText: "", linkHref: "#" }}
       />

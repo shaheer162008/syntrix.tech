@@ -13,7 +13,7 @@ export default function AIChatbotsPage() {
   return (
     <main className="flex flex-col bg-background relative w-full overflow-x-hidden">
       <Hero 
-        title="AI Chatbots"
+        title={<>AI <span className="text-primary">Chatbots</span></>}
         description="Intelligent bots that provide 24/7 customer support and automate lead generation for your business."
         announcementBanner={{ text: "AI Solutions", linkText: "", linkHref: "#" }}
       />

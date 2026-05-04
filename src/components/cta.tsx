@@ -39,7 +39,7 @@ export default function CTA() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tighter text-balance text-foreground mb-6"
           >
-            Ready to Transform Your <span className="text-foreground">Digital Presence?</span>
+            Ready to Transform Your <span className="text-primary">Digital Presence?</span>
           </motion.h2>
 
           <motion.p 
