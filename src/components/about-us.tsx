@@ -36,7 +36,7 @@ export default function AboutUs() {
               </div>
 
               <p className="text-xs text-muted-foreground font-medium leading-relaxed">
-                Loading intelligent workflows & compiling next-generation components...
+                Loading intelligent workflows and compiling next generation components...
               </p>
               <p className="text-xs text-white/80 font-semibold mt-3 animate-pulse">
                 Your digital ecosystem is almost ready.
@@ -70,9 +70,11 @@ export default function AboutUs() {
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tighter text-balance text-white mb-4 font-sans">
               About <span className="text-primary">{companyConfig.name}</span>
           </h2>
-          <p className="font-mono">
-            We build beautiful, modern interfaces with our comprehensive toolset. No setup, no configuration needed. Focus on your business while we handle the rest.
-          </p>
+          <div className="bg-card/60 backdrop-blur-sm rounded-[2rem] p-5 sm:p-6">
+            <p className="font-mono">
+              We build beautiful, modern interfaces with our comprehensive toolset. No setup, no configuration needed. Focus on your business while we handle the rest.
+            </p>
+          </div>
           <Button variant="link" className="px-0 pt-4 text-white text-base sm:text-lg tracking-tight font-semibold hover:text-white/80 transition-colors group">
             <Link href="/about#linkedin-section" className="flex items-center">
               Meet the team <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

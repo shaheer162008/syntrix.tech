@@ -10,12 +10,8 @@ export function AboutFaq() {
     },
     {
       question: "What is your main focus?",
-      answer: "Our mission is simple: provide solutions that actually work and save you time. We aren't just here to make money, we focus on lasting impact and honest advice.",
-    },
-    {
-      question: "Who are the people behind Nexiler?",
-      answer: "Nexiler was founded by Muhammad Shaheer. The core co-founding team includes Syed Muhammad Taha and Muhammad Saim.",
-    },
+      answer: "Our mission is simple: provide solutions that actually work and save you time. We are not just here to make money, we focus on lasting impact and honest advice.",
+    },  
     {
       question: "Do you work with international clients?",
       answer: "Yes, our team is equipped to handle and perfectly assist clients internationally, delivering complete web, AI, and digital growth solutions globally.",
