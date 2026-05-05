@@ -117,7 +117,7 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
       // Draw ocean (globe background)
       context.beginPath();
       context.arc(containerWidth / 2, containerHeight / 2, currentScale, 0, 2 * Math.PI);
-      context.fillStyle = "#000000";
+      context.fillStyle = "#1B1B1B";
       context.fill();
       context.strokeStyle = "#ffffff";
       context.lineWidth = 2 * scaleFactor;
@@ -308,7 +308,7 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
           <p className="text-muted-foreground">Loading globe...</p>
         </div>
       )}
-      <div className="absolute bottom-4 left-4 text-xs text-muted-foreground px-2 py-1 rounded-md dark bg-neutral-900">
+      <div className="absolute bottom-4 left-4 text-xs text-muted-foreground px-2 py-1 rounded-md dark bg-[#1B1B1B]">
         Drag to rotate • Scroll to zoom
       </div>
     </div>

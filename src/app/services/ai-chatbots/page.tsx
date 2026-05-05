@@ -27,12 +27,12 @@ export default function AIChatbotsPage() {
                 Smart <span className="text-primary">AI Conversations</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed font-mono">
-                Transform your customer service with AI-powered chatbots that understand context, provide instant responses, and qualify leads automatically. Our bots integrate seamlessly with your existing platforms.
+                Transform your customer service with AI powered chatbots that understand context, provide instant responses, and qualify leads automatically. Our bots integrate seamlessly with your existing platforms.
               </p>
               
               <div className="space-y-6 mb-10">
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black border border-white/10 shrink-0">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1B1B1B] border border-white/10 shrink-0">
                     <img src="/icons/rocket.svg" alt="Rocket" className="h-6 w-6" />
                   </div>
                   <div>
@@ -44,7 +44,7 @@ export default function AIChatbotsPage() {
                 </div>
                 
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black border border-white/10 shrink-0">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1B1B1B] border border-white/10 shrink-0">
                     <img src="/icons/chatbot.svg" alt="Chatbot" className="h-6 w-6" />
                   </div>
                   <div>
@@ -56,7 +56,7 @@ export default function AIChatbotsPage() {
                 </div>
                 
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black border border-white/10 shrink-0">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1B1B1B] border border-white/10 shrink-0">
                     <img src="/icons/merge.svg" alt="Merge" className="h-6 w-6" />
                   </div>
                   <div>

@@ -27,7 +27,7 @@ export function FloatingButtons() {
         >
           <button
             onClick={() => setIsChatOpen(true)}
-            className="w-14 h-14 rounded-full bg-black hover:bg-gray-900 flex items-center justify-center shadow-lg hover:shadow-xl transition-all hover:scale-110 border-2 border-gray-600"
+            className="w-14 h-14 rounded-full bg-[#1B1B1B] hover:bg-[#1B1B1B] flex items-center justify-center shadow-lg hover:shadow-xl transition-all hover:scale-110 border-2 border-gray-600"
             aria-label="AI Chatbot"
           >
             <Image 
@@ -45,7 +45,7 @@ export function FloatingButtons() {
                 initial={{ opacity: 0, x: 10 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 10 }}
-                className="absolute right-16 top-1/2 -translate-y-1/2 bg-black border border-gray-600 rounded-lg px-3 py-2 whitespace-nowrap shadow-xl"
+                className="absolute right-16 top-1/2 -translate-y-1/2 bg-[#1B1B1B] border border-gray-600 rounded-lg px-3 py-2 whitespace-nowrap shadow-xl"
               >
                 <p className="text-sm font-medium text-white">AI Chatbot</p>
                 <p className="text-xs text-gray-400">Ask me anything</p>
@@ -66,7 +66,7 @@ export function FloatingButtons() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-14 h-14 rounded-full bg-black hover:bg-gray-900 flex items-center justify-center shadow-lg hover:shadow-xl transition-all border-2 border-gray-600"
+            className="w-14 h-14 rounded-full bg-[#1B1B1B] hover:bg-[#1B1B1B] flex items-center justify-center shadow-lg hover:shadow-xl transition-all border-2 border-gray-600"
             aria-label="Contact us on WhatsApp"
           >
             <Image 

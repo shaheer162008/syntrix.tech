@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const siteConfig = {
   name: "Nexiler",
   description:
-    "Empowering businesses with intelligent automation, stunning websites, and relentless performance. We build world-class web applications, automate workflows with AI, and scale your digital presence.",
+    "Empowering businesses with intelligent automation, stunning websites, and relentless performance. We build premium web applications, automate workflows with AI, and scale your digital presence.",
   url: "https://nexiler.tech",
   ogImage: "https://nexiler.tech/og-image.jpg",
   links: {
@@ -42,6 +42,13 @@ export const keywords = [
 ];
 
 export const baseMetadata: Metadata = {
+  applicationName: siteConfig.name,
+  alternates: {
+    canonical: siteConfig.url,
+    languages: {
+      "en-US": siteConfig.url,
+    },
+  },
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
@@ -108,7 +115,7 @@ export const aboutMetadata: Metadata = {
   ...baseMetadata,
   title: "About Us | Nexiler",
   description:
-    "Meet the team behind Nexiler. We're passionate about building honest partnerships that drive real results through cutting-edge technology and intelligent automation.",
+    "Meet the team behind Nexiler. We're passionate about building honest partnerships that drive real results through advanced technology and intelligent automation.",
 };
 
 export const ourWorkMetadata: Metadata = {

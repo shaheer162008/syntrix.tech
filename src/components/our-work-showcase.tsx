@@ -96,7 +96,7 @@ export default function OurWorkShowcase() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-white font-semibold text-sm transition-colors w-max group/link bg-black border border-[#333] px-6 py-2.5 rounded-full hover:bg-[#111]"
+                      className="inline-flex items-center gap-2 text-white font-semibold text-sm transition-colors w-max group/link bg-[#1B1B1B] border border-[#333] px-6 py-2.5 rounded-full hover:bg-[#111]"
                     >
                       Visit Live Site
                       <FiExternalLink size={16} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
@@ -116,7 +116,7 @@ export default function OurWorkShowcase() {
             >
               <span className="text-white font-semibold text-sm tracking-wide uppercase">All Projects</span>
               <span
-                className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-black/40 border border-white/5 text-white/80"
+                className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#1B1B1B]/40 border border-white/5 text-white/80"
               >
                 {projects.length}
               </span>
@@ -160,7 +160,7 @@ export default function OurWorkShowcase() {
                     className="object-cover transition-transform duration-[1.5s] ease-in-out group-hover:scale-110"
                   />
                   {/* Subtle Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1B1B1B]/80 via-[#1B1B1B]/20 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80" />
                   
                   {/* Category Tag overlay directly on image */}
                   <div className="absolute top-4 left-4 z-10">
@@ -188,7 +188,7 @@ export default function OurWorkShowcase() {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 text-white font-medium text-sm transition-colors group/link px-6 py-2.5 bg-black rounded-full border border-[#333] hover:bg-[#111] w-max"
+                        className="inline-flex items-center justify-center gap-2 text-white font-medium text-sm transition-colors group/link px-6 py-2.5 bg-[#1B1B1B] rounded-full border border-[#333] hover:bg-[#111] w-max"
                       >
                         Visit Website
                         <FiExternalLink className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />

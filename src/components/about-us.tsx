@@ -60,7 +60,7 @@ export default function AboutUs() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900 border border-white/10 backdrop-blur-md mb-2"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1B1B1B] border border-white/10 backdrop-blur-md mb-2"
           >
             <span className="w-2 h-2 rounded-full bg-purple-400 animate-[pulse_2s_ease-in-out_infinite]" />
             <span className="text-xs font-semibold uppercase tracking-wider text-primary font-sans">

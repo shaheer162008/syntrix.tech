@@ -108,7 +108,7 @@ export default function OurWorkPage() {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-white font-medium text-sm transition-colors group/link bg-black border border-white/10 px-6 py-2.5 rounded-full hover:bg-[#111] w-max"
+                        className="inline-flex items-center gap-2 text-white font-medium text-sm transition-colors group/link bg-[#1B1B1B] border border-white/10 px-6 py-2.5 rounded-full hover:bg-[#111] w-max"
                       >
                         Visit Live Site
                         <FiExternalLink size={14} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
@@ -128,7 +128,7 @@ export default function OurWorkPage() {
               >
                 <span className="text-white font-semibold text-sm tracking-wide uppercase">All Projects</span>
                 <span
-                  className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-black/40 border border-white/5 text-white/80"
+                  className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#1B1B1B]/40 border border-white/5 text-white/80"
                 >
                   {projects.length}
                 </span>
@@ -182,7 +182,7 @@ export default function OurWorkPage() {
                           href={project.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-sm font-semibold transition-all duration-300 translate-y-4 group-hover:translate-y-0 bg-black/60 border border-white/10 hover:bg-black/80"
+                          className="flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-sm font-semibold transition-all duration-300 translate-y-4 group-hover:translate-y-0 bg-[#1B1B1B]/60 border border-white/10 hover:bg-[#1B1B1B]/80"
                         >
                           Visit Site
                           <FiExternalLink size={14} />
@@ -223,7 +223,7 @@ export default function OurWorkPage() {
           <div className="text-center mt-16 mb-16">
             <Link
               href="/"
-              className="inline-flex items-center gap-2.5 px-10 py-4 rounded-full bg-black border border-white/10 text-white font-semibold transition-all duration-300 hover:scale-105 group font-sans shadow-xl shadow-black/20"
+              className="inline-flex items-center gap-2.5 px-10 py-4 rounded-full bg-[#1B1B1B] border border-white/10 text-white font-semibold transition-all duration-300 hover:scale-105 group font-sans shadow-xl shadow-black/20"
             >
               Back to Home
               <FiArrowRight

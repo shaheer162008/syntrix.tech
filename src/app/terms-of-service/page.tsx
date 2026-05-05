@@ -28,9 +28,9 @@ export default function TermsOfService() {
               Welcome to Nexiler. We're all about building honest partnerships that drive real results for your business. Whether you need a powerful web application, smart AI automation, or a strategy to scale your brand online, these terms make sure we're on the same page from day one. We've kept this simple and clear because we believe great work starts with trust.
             </p>
 
-            <div className="bg-black/60 border border-white/10 rounded-[2rem] p-6 mb-12 backdrop-blur-md">
+            <div className="bg-[#1B1B1B]/60 border border-white/10 rounded-[2rem] p-6 mb-12 backdrop-blur-md">
               <p className="text-foreground leading-relaxed font-mono">
-                <strong>Summary:</strong> We build world-class web and mobile applications, automate workflows with AI, manage your social media presence, create engaging content, and optimize your SEO. Here's how it works: you approve a proposal, pay upfront to lock in your spot, and we deliver. If we promise a specific result, we stick with you until you get it. Simple as that.
+                <strong>Summary:</strong> We build premium web and mobile applications, automate workflows with AI, manage your social media presence, create engaging content, and optimize your SEO. Here's how it works: you approve a proposal, pay upfront to lock in your spot, and we deliver. If we promise a specific result, we stick with you until you get it. Simple as that.
               </p>
             </div>
 
@@ -46,7 +46,7 @@ export default function TermsOfService() {
             <section className="mb-12">
               <h2 className="text-2xl font-extrabold tracking-tighter text-white mb-4">2. Services and Scope</h2>
               <p className="text-foreground leading-relaxed mb-6 font-mono">
-                We help businesses grow using cutting-edge technology. Our sweet spot? Building world-class applications and digital systems that save you time, attract customers, and scale your operations.
+                We help businesses grow using advanced technology. Our sweet spot? Building premium applications and digital systems that save you time, attract customers, and scale your operations.
               </p>
               
               <h3 className="text-xl font-bold tracking-tight text-white mb-4">2.1 Service Offerings</h3>
@@ -111,7 +111,7 @@ export default function TermsOfService() {
                 Let's talk money. Here's how payment works:
               </p>
 
-              <div className="overflow-x-auto mb-6 border border-white/10 rounded-[2rem] bg-black/60 backdrop-blur-md">
+              <div className="overflow-x-auto mb-6 border border-white/10 rounded-[2rem] bg-[#1B1B1B]/60 backdrop-blur-md">
                 <table className="w-full border-collapse font-mono text-sm leading-relaxed">
                   <thead className="bg-white/5">
                     <tr className="border-b border-white/10">
@@ -285,7 +285,7 @@ export default function TermsOfService() {
             </section>
 
             {/* Global Services Section */}
-            <section className="mb-12 bg-black border border-transparent rounded-[2.5rem] p-8 sm:p-12 backdrop-blur-sm relative overflow-hidden isolate">
+            <section className="mb-12 bg-[#1B1B1B] border border-transparent rounded-[2.5rem] p-8 sm:p-12 backdrop-blur-sm relative overflow-hidden isolate">
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10" />
               <h2 className="text-3xl font-extrabold tracking-tighter text-white mb-6">Global Services - Worldwide Reach</h2>
               <p className="text-foreground leading-relaxed mb-8 font-mono">
@@ -313,27 +313,27 @@ export default function TermsOfService() {
 
               <h3 className="text-xl font-bold tracking-tight text-white mb-6">Services Available Worldwide:</h3>
               <ul className="space-y-4 font-mono">
-                <li className="flex items-center gap-3 p-4 rounded-[2rem] bg-black border border-transparent hover:bg-[#0a0a0a] transition-colors">
+                <li className="flex items-center gap-3 p-4 rounded-[2rem] bg-[#1B1B1B] border border-transparent hover:bg-[#0a0a0a] transition-colors">
                   <span className="text-primary font-bold">→</span>
                   <span className="text-foreground">Web Development (Next.js, React, Custom)</span>
                 </li>
-                <li className="flex items-center gap-3 p-4 rounded-[2rem] bg-black border border-transparent hover:bg-[#0a0a0a] transition-colors">
+                <li className="flex items-center gap-3 p-4 rounded-[2rem] bg-[#1B1B1B] border border-transparent hover:bg-[#0a0a0a] transition-colors">
                   <span className="text-primary font-bold">→</span>
                   <span className="text-foreground">Mobile App Development (iOS & Android)</span>
                 </li>
-                <li className="flex items-center gap-3 p-4 rounded-[2rem] bg-black border border-transparent hover:bg-[#0a0a0a] transition-colors">
+                <li className="flex items-center gap-3 p-4 rounded-[2rem] bg-[#1B1B1B] border border-transparent hover:bg-[#0a0a0a] transition-colors">
                   <span className="text-primary font-bold">→</span>
                   <span className="text-foreground">AI/ML Integration & Automation</span>
                 </li>
-                <li className="flex items-center gap-3 p-4 rounded-[2rem] bg-black border border-transparent hover:bg-[#0a0a0a] transition-colors">
+                <li className="flex items-center gap-3 p-4 rounded-[2rem] bg-[#1B1B1B] border border-transparent hover:bg-[#0a0a0a] transition-colors">
                   <span className="text-primary font-bold">→</span>
                   <span className="text-foreground">Global SEO & Digital Marketing</span>
                 </li>
-                <li className="flex items-center gap-3 p-4 rounded-[2rem] bg-black border border-transparent hover:bg-[#0a0a0a] transition-colors">
+                <li className="flex items-center gap-3 p-4 rounded-[2rem] bg-[#1B1B1B] border border-transparent hover:bg-[#0a0a0a] transition-colors">
                   <span className="text-primary font-bold">→</span>
                   <span className="text-foreground">Social Media Management (International)</span>
                 </li>
-                <li className="flex items-center gap-3 p-4 rounded-[2rem] bg-black border border-transparent hover:bg-[#0a0a0a] transition-colors">
+                <li className="flex items-center gap-3 p-4 rounded-[2rem] bg-[#1B1B1B] border border-transparent hover:bg-[#0a0a0a] transition-colors">
                   <span className="text-primary font-bold">→</span>
                   <span className="text-foreground">Content Creation & Translation Services</span>
                 </li>
@@ -354,7 +354,7 @@ export default function TermsOfService() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-white/90 transition-colors shadow-xl"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#1B1B1B] font-bold rounded-xl hover:bg-white/90 transition-colors shadow-xl"
                 >
                   Back to Home
                 </Link>

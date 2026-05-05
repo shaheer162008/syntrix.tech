@@ -43,7 +43,7 @@ export default function Testimonials() {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-center mb-10 md:mb-14"
@@ -60,7 +60,7 @@ export default function Testimonials() {
           </h2>
 
           <p className="text-lg sm:text-xl text-muted-foreground/90 font-medium text-balance font-mono max-w-3xl mx-auto">
-            We deliver excellence with cutting-edge technology. Our SEO-optimized solutions help businesses scale faster and smarter.
+            We deliver excellence with advanced technology. Our SEO-optimized solutions help businesses scale faster and smarter.
           </p>
         </motion.div>
 
@@ -68,7 +68,7 @@ export default function Testimonials() {
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
+          animate="visible"
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
         >

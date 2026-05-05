@@ -1,8 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { FiX, FiSend } from 'react-icons/fi';
-import Image from 'next/image';
+import { FiX, FiSend, FiZap } from 'react-icons/fi';
 
 interface Message {
   id: string;
@@ -14,12 +13,12 @@ interface Message {
 // Helper function to parse markdown formatting
 function parseMarkdown(text: string): string {
   return text
-    .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold">$1</strong>')
+    .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-white">$1</strong>')
     .replace(/_(.*?)_/g, '<em class="italic">$1</em>')
-    .replace(/\n/g, '<br />');
+    .replace(/\n/g, '<br class="my-2" />');
 }
 
-export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+export default function AIChat({ isOpen, onClose}: { isOpen: boolean; onClose: () => void }) {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
@@ -120,55 +119,48 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
     <>
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black/60 z-[10000] backdrop-blur-sm"
+        className="fixed inset-0 bg-[#1B1B1B]/50 z-[10000] backdrop-blur-sm"
         onClick={onClose}
       />
 
       {/* Chat Modal */}
       <div 
-        className="fixed inset-4 sm:bottom-6 sm:right-6 sm:left-auto sm:top-auto sm:w-[380px] md:w-[420px] sm:h-[500px] md:h-[550px] z-[10001] rounded-lg sm:rounded-xl md:rounded-[1.5rem] shadow-lg sm:shadow-2xl overflow-hidden flex flex-col font-sans"
+        className="fixed bottom-0 left-0 right-0 sm:bottom-6 sm:right-6 sm:left-auto z-[10001] w-full sm:w-[400px] md:w-[450px] h-[85vh] sm:h-[600px] md:h-[650px] sm:rounded-2xl rounded-t-2xl shadow-2xl overflow-hidden flex flex-col font-sans"
         style={{
-          background: '#000',
-          border: '1px solid rgba(148,163,184,0.12)',
-          maxHeight: 'calc(100vh - 32px)',
+          background: 'linear-gradient(180deg, #1B1B1B 0%, #1B1B1B 100%)',
+          border: '1px solid rgba(255,255,255,0.1)',
         }}
       >
         {/* Header */}
         <div
-          className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b font-mono"
+          className="flex items-center justify-between px-6 py-5 border-b"
           style={{
-            borderColor: 'rgba(148,163,184,0.08)',
-            background: 'transparent',
+            borderColor: 'rgba(255,255,255,0.1)',
+            background: 'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02))',
           }}
         >
           <div>
-            <div className="flex items-center gap-2 sm:gap-3 mb-1">
-              <div className="bg-white/6 p-2 sm:p-2.5 rounded-lg sm:rounded-xl flex items-center justify-center h-8 w-8 sm:h-9 sm:w-9">
-                <Image 
-                  src="/icons/aichatbot.svg" 
-                  alt="AI Chatbot" 
-                  width={20}
-                  height={20}
-                  className="sm:w-[22px] sm:h-[22px]"
-                />
+            <div className="flex items-center gap-3 mb-1">
+              <div className="bg-primary/20 p-2 rounded-full">
+                <FiZap size={18} className="text-primary animate-pulse" />
               </div>
-              <h3 className="text-white font-semibold text-base sm:text-lg tracking-tight font-mono">Nexiler</h3>
+              <h3 className="text-white font-semibold text-lg tracking-tight">Nexiler Assistant</h3>
             </div>
-            <p className="text-gray-400 text-[11px] sm:text-xs pl-10 sm:pl-12 font-mono">AI Assistant</p>
+            <p className="text-gray-400 text-xs pl-11">Always here to help</p>
           </div>
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-white transition-colors p-1.5 sm:p-2 hover:bg-white/6 rounded-lg sm:rounded-xl"
+            className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-full"
           >
-            <FiX size={18} className="sm:w-[20px]" />
+            <FiX size={20} />
           </button>
         </div>
 
         {/* Messages Container */}
         <div
-          className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 font-mono"
+          className="flex-1 overflow-y-auto p-4 space-y-4"
           style={{
-            background: 'transparent',
+            background: 'linear-gradient(to bottom, rgba(26,26,46,0.8), rgba(15,15,30,0.8))',
           }}
         >
           {messages.map((msg) => (
@@ -177,18 +169,15 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
               className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div
-                className={`max-w-[85%] px-4 sm:px-5 py-2.5 sm:py-3.5 rounded-lg sm:rounded-xl md:rounded-[2rem] text-sm sm:text-[15px] ${
+                className={`max-w-[85%] px-5 py-3 rounded-2xl shadow-sm text-[15px] ${
                   msg.role === 'user'
-                    ? 'bg-white text-black border border-gray-200'
-                    : 'bg-[#0a0a0a] text-white border border-gray-600'
+                    ? 'bg-primary text-primary-foreground rounded-br-sm'
+                    : 'bg-white/5 text-gray-200 border border-white/10 rounded-bl-sm'
                 }`}
-                style={{
-                  wordBreak: 'break-word'
-                }}
               >
                 {msg.role === 'assistant' ? (
                   <div
-                    className="leading-relaxed max-w-none"
+                    className="leading-relaxed prose prose-invert prose-p:my-1 prose-a:text-primary max-w-none"
                     dangerouslySetInnerHTML={{ __html: parseMarkdown(msg.content) }}
                   />
                 ) : (
@@ -199,11 +188,11 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
           ))}
           {loading && (
             <div className="flex justify-start">
-              <div className="bg-[#0a0a0a] text-gray-400 border border-gray-600 px-4 sm:px-5 py-3 sm:py-4 rounded-lg sm:rounded-xl md:rounded-[2rem]">
+              <div className="bg-white/5 text-gray-400 border border-white/10 px-5 py-4 rounded-2xl rounded-bl-sm">
                 <div className="flex gap-1.5 items-center">
-                  <div className="w-[5px] h-[5px] sm:w-[6px] sm:h-[6px] bg-white rounded-full animate-bounce" />
-                  <div className="w-[5px] h-[5px] sm:w-[6px] sm:h-[6px] bg-white rounded-full animate-bounce" style={{ animationDelay: '0.15s' }} />
-                  <div className="w-[5px] h-[5px] sm:w-[6px] sm:h-[6px] bg-white rounded-full animate-bounce" style={{ animationDelay: '0.3s' }} />
+                  <div className="w-[6px] h-[6px] bg-primary rounded-full animate-bounce" />
+                  <div className="w-[6px] h-[6px] bg-primary rounded-full animate-bounce" style={{ animationDelay: '0.15s' }} />
+                  <div className="w-[6px] h-[6px] bg-primary rounded-full animate-bounce" style={{ animationDelay: '0.3s' }} />
                 </div>
               </div>
             </div>
@@ -212,7 +201,7 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
         </div>
 
         {/* Input Area */}
-        <div className="p-3 sm:p-4 border-t font-mono" style={{ borderColor: 'rgba(148,163,184,0.06)', background: '#050505' }}>
+        <div className="p-4 sm:p-5 border-t border-white/10 bg-[#1B1B1B]/90 backdrop-blur-md">
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -220,7 +209,7 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
             }}
             className="flex items-end gap-2 relative"
           >
-            <div className="flex-1 bg-transparent border border-gray-600 rounded-lg sm:rounded-xl md:rounded-[1.5rem] relative overflow-hidden focus-within:border-gray-400 transition-all">
+            <div className="flex-1 bg-white/5 border border-white/10 rounded-2xl md:rounded-[1.5rem] relative overflow-hidden focus-within:border-primary/50 focus-within:bg-white/10 transition-all">
               <textarea
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
@@ -230,8 +219,8 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
                     handleSendMessage();
                   }
                 }}
-                placeholder="Ask something..."
-                className="w-full bg-transparent text-white placeholder-gray-400 px-3 sm:px-4 py-3 sm:py-4 focus:outline-none resize-none max-h-32 min-h-[44px] sm:min-h-[48px] text-sm sm:text-base"
+                placeholder="Ask about our services..."
+                className="w-full bg-transparent text-white placeholder-gray-400 px-5 py-4 focus:outline-none resize-none max-h-32 min-h-[56px]"
                 rows={1}
                 disabled={loading}
               />
@@ -239,13 +228,13 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
             <button
               type="submit"
               disabled={loading || input.trim() === ''}
-              className="bg-white hover:bg-gray-100 text-black p-2.5 sm:p-3 rounded-lg sm:rounded-xl md:rounded-[1.5rem] disabled:opacity-50 transition-colors disabled:cursor-not-allowed flex-shrink-0 flex items-center justify-center h-[44px] w-[44px] sm:h-[48px] sm:w-[48px]"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground p-4 rounded-2xl md:rounded-[1.5rem] disabled:opacity-50 transition-colors disabled:cursor-not-allowed flex-shrink-0 flex items-center justify-center h-[56px] w-[56px]"
             >
-              <FiSend size={18} className="sm:w-[20px]" />
+              <FiSend size={20} />
             </button>
           </form>
-          <div className="text-center mt-2">
-            <span className="text-[9px] sm:text-[10px] text-gray-500">AI can make mistakes</span>
+          <div className="text-center mt-3">
+            <span className="text-[10px] text-gray-500">AI can make mistakes. Please verify important information.</span>
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@ export default function SimpleGlobe({ width = "100%", height = "500px", classNam
           <div 
             className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full border-2 border-[#a855f7]/30 relative"
             style={{
-              background: 'radial-gradient(circle at 30% 30%, #001a1a, #000000)',
+              background: 'radial-gradient(circle at 30% 30%, #1B1B1B, #1B1B1B)',
               boxShadow: '0 0 60px rgba(0, 225, 255, 0.15), inset 0 0 30px rgba(0, 225, 255, 0.1)'
             }}
           >
@@ -66,7 +66,7 @@ export default function SimpleGlobe({ width = "100%", height = "500px", classNam
       </div>
       
       {/* Bottom text */}
-      <div className="absolute bottom-4 left-4 text-xs text-muted-foreground px-2 py-1 rounded-md bg-black/50 backdrop-blur-sm">
+      <div className="absolute bottom-4 left-4 text-xs text-muted-foreground px-2 py-1 rounded-md bg-[#1B1B1B]/50 backdrop-blur-sm">
         Interactive 3D Globe
       </div>
     </div>

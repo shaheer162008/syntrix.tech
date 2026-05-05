@@ -22,7 +22,7 @@ export default function OurWork({ hideViewMore }: { hideViewMore?: boolean }) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full font-bold tracking-widest text-[11px] mb-6 bg-black border border-transparent text-white uppercase shadow-sm"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full font-bold tracking-widest text-[11px] mb-6 bg-[#1B1B1B] border border-transparent text-white uppercase shadow-sm"
           >
             PORTFOLIO
           </motion.div>
@@ -125,7 +125,7 @@ export default function OurWork({ hideViewMore }: { hideViewMore?: boolean }) {
           >
             <Link
               href="/our-work"
-              className="inline-flex items-center gap-2.5 px-10 py-4 rounded-full bg-black border border-white/10 text-white font-semibold transition-all duration-300 hover:scale-105 group font-sans shadow-xl shadow-black/20"
+              className="inline-flex items-center gap-2.5 px-10 py-4 rounded-full bg-[#1B1B1B] border border-white/10 text-white font-semibold transition-all duration-300 hover:scale-105 group font-sans shadow-xl shadow-black/20"
             >
               See All Our Work
               <FiArrowRight

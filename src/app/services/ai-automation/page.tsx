@@ -32,7 +32,7 @@ export default function AIAutomationPage() {
               
               <div className="space-y-6 mb-10">
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black border border-white/10 shrink-0">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1B1B1B] border border-white/10 shrink-0">
                     <img src="/icons/chatbot.svg" alt="Chatbot" className="h-6 w-6" />
                   </div>
                   <div>
@@ -44,7 +44,7 @@ export default function AIAutomationPage() {
                 </div>
                 
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black border border-white/10 shrink-0">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1B1B1B] border border-white/10 shrink-0">
                     <img src="/icons/rocket.svg" alt="Rocket" className="h-6 w-6" />
                   </div>
                   <div>
@@ -56,7 +56,7 @@ export default function AIAutomationPage() {
                 </div>
                 
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black border border-white/10 shrink-0">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1B1B1B] border border-white/10 shrink-0">
                       <img src="/icons/integrate.svg" alt="Integrate" className="h-6 w-6" />
                   </div>
                   <div>

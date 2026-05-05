@@ -51,8 +51,8 @@ export default function HomeHero(props: any) {
       <header className="absolute inset-x-0 top-0 z-10">
         <nav aria-label="Global" className="flex items-center justify-between p-4 sm:p-6 lg:px-8">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2 group">
-              <span className="font-negan text-3xl font-normal lowercase tracking-wide text-[#a855f7] drop-shadow-[0_0_8px_rgba(168,85,247,0.5)]">nexiler</span>
+            <a href="/" className="-m-1.5 p-1.5 flex items-center gap-2 group">
+              <span className="font-negan text-3xl sm:text-4xl font-extrabold lowercase tracking-wide text-primary">nexiler</span>
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -87,8 +87,8 @@ export default function HomeHero(props: any) {
             <div className="fixed inset-0 bg-background/80 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} />
             <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background/95 backdrop-blur-xl px-4 py-4 sm:px-6 sm:py-6 sm:max-w-sm sm:ring-1 sm:ring-border">
               <div className="flex items-center justify-between">
-                <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">     
-                  <span className="font-negan text-3xl font-normal lowercase tracking-wide text-[#a855f7]">nexiler</span>
+                <a href="/" className="-m-1.5 p-1.5 flex items-center gap-2">     
+                  <span className="font-negan text-3xl sm:text-4xl font-extrabold lowercase tracking-wide text-primary">nexiler</span>
                 </a>
                 <button
                   type="button"
@@ -184,7 +184,7 @@ export default function HomeHero(props: any) {
           <RotatingEarth width={600} height={500} className="w-full" />
           
           {/* Vertical Position on Right Wall with Upright Letters */}
-          <div className="absolute right-0 lg:right-2 top-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-4 z-50">
+          <div className="absolute right-0 lg:right-2 top-1/2 -translate-y-1/2 hidden md:flex flex-col items-center justify-center gap-4 z-50">
             <div className="h-16 w-[2px] bg-[#a855f7]"></div>
             <span 
               className="text-sm font-bold uppercase text-[#a855f7] tracking-[0.3em] flex flex-col items-center text-center"

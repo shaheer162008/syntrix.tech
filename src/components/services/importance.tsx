@@ -44,7 +44,7 @@ export function ServicesImportance() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-card/30 border border-white/5 hover:border-white/10 p-8 rounded-[2rem] backdrop-blur-sm hover:bg-card/60 transition-colors group"
             >
-              <div className="size-14 rounded-full bg-black border border-white/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+              <div className="size-14 rounded-full bg-[#1B1B1B] border border-white/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
                 {item.icon}
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 tracking-tight">
@@ -61,7 +61,7 @@ export function ServicesImportance() {
                 </li>
                 <li className="flex items-center gap-3 text-sm font-medium text-foreground/80">
                   <CheckCircle2 className="h-4 w-4 text-primary" />
-                  AI-driven efficiency
+                  AI powered efficiency
                 </li>
                 <li className="flex items-center gap-3 text-sm font-medium text-foreground/80">
                   <CheckCircle2 className="h-4 w-4 text-primary" />

@@ -127,10 +127,10 @@ export function ServicesBentoGrid() {
               
               <CardHeader className="flex-1 p-6 relative z-10">
                 <div className="flex items-start justify-between mb-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black border border-primary/10 shadow-[0_0_15px_-5px_rgba(168,85,247,0.1)] bg-gradient-to-b from-primary/5 to-transparent group-hover:bg-primary/20 group-hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:scale-110 transition-all duration-500 ease-out">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1B1B1B] border border-primary/10 shadow-[0_0_15px_-5px_rgba(168,85,247,0.1)] bg-gradient-to-b from-primary/5 to-transparent group-hover:bg-primary/20 group-hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:scale-110 transition-all duration-500 ease-out">
                     {service.icon}
                   </div>
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black border border-primary/10 shadow-[0_0_15px_-5px_rgba(168,85,247,0.1)] bg-gradient-to-b from-primary/5 to-transparent opacity-0 -translate-x-4 translate-y-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500 ease-out">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#1B1B1B] border border-primary/10 shadow-[0_0_15px_-5px_rgba(168,85,247,0.1)] bg-gradient-to-b from-primary/5 to-transparent opacity-0 -translate-x-4 translate-y-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500 ease-out">
                     <ArrowUpRight className="h-4 w-4 text-primary" />
                   </div>
                 </div>

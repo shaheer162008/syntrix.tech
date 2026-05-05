@@ -97,7 +97,7 @@ export default function Contact() {
 
             <div className="space-y-6 w-full md:pr-8">
               <div className="flex items-center gap-4 p-4 sm:p-6 rounded-[2rem] bg-card/60 backdrop-blur-md border border-white/5 hover:border-white/10 transition-colors w-full">
-                <div className="flex items-center justify-center w-12 h-12 rounded-[2rem] bg-black border border-white/5 shrink-0">
+                <div className="flex items-center justify-center w-12 h-12 rounded-[2rem] bg-[#1B1B1B] border border-white/5 shrink-0">
                   <Mail className="w-5 h-5 text-foreground" />
                 </div>
                 <div className="overflow-hidden">
@@ -107,7 +107,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-4 p-4 sm:p-6 rounded-[2rem] bg-card/60 backdrop-blur-md border border-white/5 hover:border-white/10 transition-colors w-full">
-                <div className="flex items-center justify-center w-12 h-12 rounded-[2rem] bg-black border border-white/5 shrink-0">
+                <div className="flex items-center justify-center w-12 h-12 rounded-[2rem] bg-[#1B1B1B] border border-white/5 shrink-0">
                   <Phone className="w-5 h-5 text-foreground" />
                 </div>
                 <div className="overflow-hidden">
@@ -117,7 +117,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-4 p-4 sm:p-6 rounded-[2rem] bg-card/60 backdrop-blur-md border border-white/5 hover:border-white/10 transition-colors w-full">
-                <div className="flex items-center justify-center w-12 h-12 rounded-[2rem] bg-black border border-white/5 shrink-0">
+                <div className="flex items-center justify-center w-12 h-12 rounded-[2rem] bg-[#1B1B1B] border border-white/5 shrink-0">
                   <MapPin className="w-5 h-5 text-foreground" />
                 </div>
                 <div className="overflow-hidden">
@@ -127,7 +127,7 @@ export default function Contact() {
               </div>
 
  <div className="flex items-center gap-4 p-4 sm:p-6 rounded-[2rem] bg-card/60 backdrop-blur-md border border-white/5 hover:border-white/10 transition-colors w-full">
-                <div className="flex items-center justify-center w-12 h-12 rounded-[2rem] bg-black border border-white/5 shrink-0">
+                <div className="flex items-center justify-center w-12 h-12 rounded-[2rem] bg-[#1B1B1B] border border-white/5 shrink-0">
                   <Mail className="w-5 h-5 text-foreground" />
                 </div>
                 <div className="overflow-hidden">
