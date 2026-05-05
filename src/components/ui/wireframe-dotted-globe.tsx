@@ -231,16 +231,23 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
     // Auto-rotation timer
     const rotationTimer = d3.timer(rotate);
 
-    const handleMouseDown = (event: MouseEvent) => {
+    const handleMouseDown = (event: MouseEvent | TouchEvent) => {
       autoRotate = false;
-      const startX = event.clientX;
-      const startY = event.clientY;
+      const isTouch = 'touches' in event;
+      const startX = isTouch ? event.touches[0].clientX : (event as MouseEvent).clientX;
+      const startY = isTouch ? event.touches[0].clientY : (event as MouseEvent).clientY;
       const startRotation = [...rotation] as [number, number, number];
 
-      const handleMouseMove = (moveEvent: MouseEvent) => {
+      const handleMouseMove = (moveEvent: MouseEvent | TouchEvent) => {
+        // Prevent default to stop scrolling/zooming while dragging the globe
+        moveEvent.preventDefault();
+        const isTouchMove = 'touches' in moveEvent;
+        const currentX = isTouchMove ? moveEvent.touches[0].clientX : (moveEvent as MouseEvent).clientX;
+        const currentY = isTouchMove ? moveEvent.touches[0].clientY : (moveEvent as MouseEvent).clientY;
+
         const sensitivity = 0.5;
-        const dx = moveEvent.clientX - startX;
-        const dy = moveEvent.clientY - startY;
+        const dx = currentX - startX;
+        const dy = currentY - startY;
 
         rotation[0] = startRotation[0] + dx * sensitivity;
         rotation[1] = startRotation[1] - dy * sensitivity;
@@ -251,28 +258,27 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
       };
 
       const handleMouseUp = () => {
-        document.removeEventListener("mousemove", handleMouseMove);
+        document.removeEventListener("mousemove", handleMouseMove as any);
         document.removeEventListener("mouseup", handleMouseUp);
+        document.removeEventListener("touchmove", handleMouseMove as any);
+        document.removeEventListener("touchend", handleMouseUp);
 
         setTimeout(() => {
           autoRotate = true;
         }, 10);
       };
 
-      document.addEventListener("mousemove", handleMouseMove);
-      document.addEventListener("mouseup", handleMouseUp);
+      if (isTouch) {
+        document.addEventListener("touchmove", handleMouseMove as any, { passive: false });
+        document.addEventListener("touchend", handleMouseUp);
+      } else {
+        document.addEventListener("mousemove", handleMouseMove as any);
+        document.addEventListener("mouseup", handleMouseUp);
+      }
     };
 
-    const handleWheel = (event: WheelEvent) => {
-      event.preventDefault();
-      const scaleFactor = event.deltaY > 0 ? 0.9 : 1.1;
-      const newRadius = Math.max(radius * 0.5, Math.min(radius * 3, projection.scale() * scaleFactor));
-      projection.scale(newRadius);
-      render();
-    };
-
-    canvas.addEventListener("mousedown", handleMouseDown);
-    canvas.addEventListener("wheel", handleWheel);
+    canvas.addEventListener("mousedown", handleMouseDown as any);
+    canvas.addEventListener("touchstart", handleMouseDown as any, { passive: false });
 
     // Load the world data
     loadWorldData();
@@ -280,8 +286,8 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
     // Cleanup
     return () => {
       rotationTimer.stop();
-      canvas.removeEventListener("mousedown", handleMouseDown);
-      canvas.removeEventListener("wheel", handleWheel);
+      canvas.removeEventListener("mousedown", handleMouseDown as any);
+      canvas.removeEventListener("touchstart", handleMouseDown as any);
     };
   }, [width, height]);
 
@@ -300,16 +306,16 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
     <div className={`relative ${className}`}>
       <canvas
         ref={canvasRef}
-        className="w-full h-auto rounded-2xl bg-background dark"
-        style={{ maxWidth: "100%", height: "auto" }}
+        className="w-full h-auto rounded-2xl bg-background dark cursor-grab active:cursor-grabbing"
+        style={{ maxWidth: "100%", height: "auto", touchAction: "none" }}
       />
       {!dataLoaded && (
         <div className="absolute inset-0 flex items-center justify-center bg-background/80 rounded-2xl">
-          <p className="text-muted-foreground">Loading globe...</p>
+          <p className="text-muted-foreground font-mono">Loading globe...</p>
         </div>
       )}
-      <div className="absolute bottom-4 left-4 text-xs text-muted-foreground px-2 py-1 rounded-md dark bg-[#1B1B1B]">
-        Drag to rotate • Scroll to zoom
+      <div className="absolute bottom-4 left-4 text-xs text-muted-foreground px-2 py-1 rounded-md dark bg-[#1B1B1B] font-mono">
+        Drag to rotate
       </div>
     </div>
   );

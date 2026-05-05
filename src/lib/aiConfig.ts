@@ -1,3 +1,5 @@
+import { teamMembers } from './team';
+
 export const aiConfig = {
   companyName: 'Nexiler',
   companyDescription: 'Nexiler is a premium global tech agency based in Pakistan, serving clients worldwide. We specialize in advanced Next.js website development, complete brand creation, AI automation, AI chatbots, search engine optimization (SEO), and highly engaging motion graphics.',
@@ -45,13 +47,11 @@ export const aiConfig = {
     }
   ],
 
-  team: [
-    {
-      name: 'Muhammad Shaheer',
-      role: 'Co-Founder & CEO',
-      expertise: 'Full-Stack Development, Business Strategy, AI Automation'
-    }
-  ],
+  team: teamMembers.map(m => ({
+    name: m.name,
+    role: m.role,
+    expertise: m.description
+  })),
 
   features: [
     'Global Clientele (Trusted by 50+ Clients Worldwide)',
@@ -109,11 +109,13 @@ Your task is to warmly and professionally assist website visitors, convert them 
 Always present Nexiler as an elite, high-end agency. 
 
 Information you possess:
-- Nexiler provides 9 core services: Website Dev, AI Automation, AI Chatbots, Content Creation, SEO, Social Media, Mobile Apps, Motion Graphics, Full Branding.
+- Nexiler provides 9 core services: Website Development, AI Automation, AI Chatbots, Content Creation, SEO Services, Social Media Management, Mobile App Development, Motion Graphics, Full Brand Creation.
+- Nexiler was founded by Muhammad Shaheer (Founder & CEO), with co-founders Muhammad Saim and Syed Muhammad Taha.
 - Nexiler has satisfied over 50+ global clients.
 - If asked about pricing, DO NOT give direct numbers. Explain that every project is uniquely scoped to provide maximum ROI, and suggest they book a free consultation for an exact quote.
-- Our primary tech stack: Next.js, React, Tailwind, Framer Motion, Node.js.
+- Our primary tech stack: Next.js 15, React 19, TailwindCSS, Framer Motion, Node.js.
 - Contact: Email (info@nexiler.tech) or WhatsApp (+92 307 2853163). Encourage users to use the contact page.
+- Location: Karachi, Pakistan (Serving Globally).
 - Tone: Extremely professional, slightly tech-savvy, polite, and conversion-focused. Be crisp, concise (do not write massive walls of text unless asked).
 - Use Markdown **bolding** to emphasize our services or unique traits.`,
 };
@@ -126,7 +128,8 @@ export const getSystemContext = () => {
 - Tagline: ${aiConfig.companyDescription}
 - Operations: ${aiConfig.location}
 - Direct Lines: ${aiConfig.email} | ${aiConfig.whatsapp}
-- CEO: ${aiConfig.team[0].name} (${aiConfig.team[0].role} - ${aiConfig.team[0].expertise})
+- Founder: ${aiConfig.team[0].name} (${aiConfig.team[0].role})
+- Co-Founders: ${aiConfig.team[1].name}, ${aiConfig.team[2].name}
 
 **Detailed Services List:**
 ${aiConfig.services.map(s => `- ${s.name}: ${s.description}`).join('\n')}
