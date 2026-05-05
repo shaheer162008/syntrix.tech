@@ -76,7 +76,7 @@ const SupportCard = () => (
           </Badge>
         </div>
         <div>
-          <span className="text-5xl sm:text-6xl font-extrabold tracking-tighter text-white">24/7</span>
+          <span className="text-5xl sm:text-6xl font-extrabold tracking-tighter text-primary">24/7</span>
         </div>
       </div>
       <div className="flex justify-between text-xs sm:text-sm font-mono font-medium text-white/90 mt-4">
@@ -95,7 +95,7 @@ const CustomSolutionsCard = () => (
         <Code2 className="h-6 w-6 text-primary" />
       </div>
       <CardTitle className="text-xl sm:text-2xl font-extrabold tracking-tighter text-white mb-2">
-        Custom Solutions
+        Custom <span className="text-primary">Solutions</span>
       </CardTitle>
       <CardDescription className="font-mono text-sm text-white/90">
         Tailored solutions built around your specific business goals, not generic templates.
@@ -105,7 +105,7 @@ const CustomSolutionsCard = () => (
 );
 
 const ROICard = () => (
-  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border-white/5 hover:border-white/20 transition-all duration-500 ease-out hover:shadow-[0_0_40px_-15px_rgba(255,255,255,0.1)] cursor-pointer relative h-full w-full overflow-hidden font-sans">
+  <Card className="relative rounded-[2rem] group overflow-hidden bg-card/60 backdrop-blur-sm border-primary/10 hover:border-primary/40 transition-all duration-500 ease-out shadow-[0_0_15px_-5px_rgba(168,85,247,0.1)] hover:shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)] bg-gradient-to-b from-primary/5 to-transparent cursor-pointer relative h-full w-full overflow-hidden font-sans">
     <div
       className="absolute inset-0 opacity-20"
       style={{
@@ -115,7 +115,7 @@ const ROICard = () => (
     />
     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
     <CardContent className="relative z-10 flex h-full items-center justify-center p-6">
-      <span className="text-7xl font-extrabold text-white/90 tracking-tighter">ROI</span>
+      <span className="text-7xl font-extrabold text-primary tracking-tighter">ROI</span>
     </CardContent>
   </Card>
 );

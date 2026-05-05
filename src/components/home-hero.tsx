@@ -132,15 +132,15 @@ export default function HomeHero(props: any) {
       </header>
 
       {/* Main Hero Section with Globe */}
-      <div className="relative px-6 pt-8 sm:pt-12 lg:pt-16 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
+      <div className="relative px-6 pt-8 sm:pt-12 lg:pt-16 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16 overflow-visible">
         {/* Left Side - Content */}
         <div className="flex-1 text-center lg:text-left z-10">
           {/* Announcement Banner */}
           {announcementBanner && (
             <div className="mb-8 flex justify-center lg:justify-start animate-in fade-in slide-in-from-bottom-4 duration-700 ease-out">
-              <div className="relative flex items-center gap-x-2 rounded-full border border-primary/20 bg-primary-[0.02] shadow-[0_0_15px_rgba(168,85,247,0.15)] px-4 py-1.5 text-sm leading-6 text-foreground shadow-sm hover:border-primary/40 hover:bg-primary/5 hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all cursor-pointer backdrop-blur-md">
-                <Sparkles className="h-4 w-4 text-primary" />
-                <span className="font-semibold text-primary/90 tracking-wide">{announcementBanner.text}</span>
+              <div className="relative flex items-center gap-x-2 rounded-full border border-[#a855f7] bg-transparent px-4 py-1.5 text-sm leading-6 shadow-sm hover:bg-[#a855f7]/10 transition-all cursor-pointer backdrop-blur-md">
+                <Sparkles className="h-4 w-4 text-[#a855f7]" />
+                <span className="font-semibold text-foreground tracking-wide">{announcementBanner.text}</span>
               </div>
             </div>
           )}
@@ -179,9 +179,21 @@ export default function HomeHero(props: any) {
           </div>
         </div>
 
-        {/* Right Side - Globe */}
-        <div className="flex-1 w-full lg:w-auto max-w-[500px] lg:max-w-[600px]">
+        {/* Right Side - Globe with Side Text */}
+        <div className="flex-1 w-full lg:w-auto max-w-[500px] lg:max-w-[600px] relative flex justify-center lg:justify-end items-center">
           <RotatingEarth width={600} height={500} className="w-full" />
+          
+          {/* Vertical Position on Right Wall with Upright Letters */}
+          <div className="absolute right-0 lg:right-2 top-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-4 z-50">
+            <div className="h-16 w-[2px] bg-[#a855f7]"></div>
+            <span 
+              className="text-sm font-bold uppercase text-[#a855f7] tracking-[0.3em] flex flex-col items-center text-center"
+              style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}
+            >
+              Serving Globally
+            </span>
+            <div className="h-16 w-[2px] bg-[#a855f7]"></div>
+          </div>
         </div>
       </div>
     </div>

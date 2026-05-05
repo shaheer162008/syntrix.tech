@@ -181,11 +181,11 @@ export default function Hero(props: any) {
           {/* CUSTOMIZED BADGE (Announcement Banner) */}
           {announcementBanner && (
             <div className="mb-8 flex justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 ease-out">
-              <div className="relative flex items-center gap-x-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm leading-6 text-foreground shadow-sm hover:border-white/20 hover:bg-white/10 transition-all cursor-pointer backdrop-blur-md">
-                <Sparkles className="h-4 w-4 text-white" />
-                <span className="font-semibold text-white">{announcementBanner.text}</span>
+              <div className="relative flex items-center gap-x-2 rounded-full border border-[#a855f7] bg-transparent px-4 py-1.5 text-sm leading-6 shadow-sm hover:bg-[#a855f7]/10 transition-all cursor-pointer backdrop-blur-md">
+                <Sparkles className="h-4 w-4 text-[#a855f7]" />
+                <span className="font-semibold text-foreground">{announcementBanner.text}</span>
                 <span className="text-muted-foreground hidden sm:inline-block">|</span>
-                <a href={announcementBanner.linkHref} className="font-medium hover:text-primary transition-colors flex items-center gap-1 group">
+                <a href={announcementBanner.linkHref} className="font-medium text-foreground hover:text-[#a855f7] transition-colors flex items-center gap-1 group">
                   <span aria-hidden="true" className="absolute inset-0" />
                   {announcementBanner.linkText} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
