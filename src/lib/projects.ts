@@ -84,6 +84,15 @@ export const projects: Project[] = [
     image: '/our-work/innox.png',
     link: 'https://innoxes.com/',
   },
+    {
+    id: 'typing-test-pk',
+    title: 'Typing Test PK',
+    category: 'Website Development',
+    description:
+      'A simple yet effective website for a typing test platform to showcase services and facilitate contact.',
+    image: '/our-work/typing-test-pk.png',
+    link: 'https://typingtestpk.com/',
+  },
 ];
 
 export const featuredProjects = projects.filter((p) => p.featured);
