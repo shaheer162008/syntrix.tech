@@ -21,16 +21,27 @@ export async function POST(request: NextRequest) {
       to: "info@nexiler.tech",
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <h2 style="color: #333;">New Contact Form Submission</h2>
-          <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-            <p><strong>Message:</strong></p>
-            <p style="background: white; padding: 15px; border-radius: 4px;">${message}</p>
+        <div style="max-width: 600px; margin: 0 auto; background-color: #1B1B1B; color: #ffffff; padding: 40px; border-radius: 12px;">
+          <div style="text-align: center; margin-bottom: 30px;">
+            <svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto;">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 42px; font-weight: 800; letter-spacing: -1px; fill: #a855f7; text-transform: lowercase;">nexiler</text>
+            </svg>
+            <p style="color: #999999; font-size: 14px; margin-top: 10px;">New Contact Form Submission</p>
           </div>
-          <p style="color: #666; font-size: 12px;">Sent from Nexiler.tech contact form</p>
+          
+          <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 12px; border: 1px solid rgba(168,85,247,0.2); margin: 20px 0;">
+            <p style="color: #999999; margin-bottom: 5px;"><strong style="color: #a855f7;">Name:</strong> ${firstName} ${lastName}</p>
+            <p style="color: #999999; margin-bottom: 5px;"><strong style="color: #a855f7;">Email:</strong> ${email}</p>
+            <p style="color: #999999; margin-bottom: 5px;"><strong style="color: #a855f7;">Phone:</strong> ${phone || "Not provided"}</p>
+            <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
+              <p style="color: #999999; margin-bottom: 10px;"><strong style="color: #a855f7;">Message:</strong></p>
+              <p style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px; color: #cccccc; line-height: 1.6;">${message}</p>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p style="color: #666666; font-size: 12px;">Sent from Nexiler.tech contact form</p>
+          </div>
         </div>
       `,
     };
@@ -41,34 +52,41 @@ export async function POST(request: NextRequest) {
       to: email,
       subject: "Thank you for contacting Nexiler!",
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+        <div style="max-width: 600px; margin: 0 auto; background-color: #1B1B1B; color: #ffffff; padding: 40px; border-radius: 12px;">
           <div style="text-align: center; margin-bottom: 30px;">
-            <h1 style="color: #000; margin-bottom: 10px;">Thank You for Reaching Out!</h1>
-            <p style="color: #666; font-size: 16px;">We've received your message and will respond within 24 hours.</p>
+            <svg width="220" height="55" viewBox="0 0 220 55" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto;">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 46px; font-weight: 800; letter-spacing: -1px; fill: #a855f7; text-transform: lowercase;">nexiler</text>
+            </svg>
+            <p style="color: #999999; font-size: 16px; margin-top: 10px;">Intelligent Automation & Premium Web Development</p>
           </div>
           
-          <div style="background: #f5f5f5; padding: 25px; border-radius: 8px; margin: 20px 0;">
-            <h2 style="color: #333; margin-top: 0;">Your Submission Details:</h2>
-            <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-            <p><strong>Your Message:</strong></p>
-            <p style="background: white; padding: 15px; border-radius: 4px;">${message}</p>
+          <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 12px; border: 1px solid rgba(168,85,247,0.2); margin: 20px 0;">
+            <h2 style="color: #ffffff; margin-top: 0; font-size: 22px;">Thank You for Reaching Out!</h2>
+            <p style="color: #cccccc; font-size: 15px; line-height: 1.6;">We have received your message and our team of experts is currently reviewing your requirements. We will respond within 24 hours.</p>
+            
+            <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+              <p style="color: #999999; margin-bottom: 5px;"><strong style="color: #a855f7;">Your Submission:</strong></p>
+              <p style="color: #ffffff; margin: 5px 0;">Name: ${firstName} ${lastName}</p>
+              <p style="color: #ffffff; margin: 5px 0;">Email: ${email}</p>
+              <p style="color: #ffffff; margin: 5px 0;">Phone: ${phone || "Not provided"}</p>
+            </div>
           </div>
 
-          <div style="background: #000; color: white; padding: 25px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="margin-top: 0; color: white;">What happens next?</h3>
-            <ol style="padding-left: 20px;">
-              <li style="margin: 10px 0;">We'll review your requirements carefully</li>
-              <li style="margin: 10px 0;">Our team will contact you within 24 hours</li>
-              <li style="margin: 10px 0;">We'll schedule a free consultation call</li>
-              <li style="margin: 10px 0;">We'll provide the best solution for your business</li>
-            </ol>
+          <div style="background: linear-gradient(135deg, rgba(168,85,247,0.1) 0%, rgba(168,85,247,0) 100%); padding: 30px; border-radius: 12px; border-left: 4px solid #a855f7; margin: 20px 0;">
+            <h3 style="margin-top: 0; color: #a855f7; font-size: 18px;">What happens next?</h3>
+            <ul style="padding-left: 20px; color: #cccccc; line-height: 1.8; margin: 10px 0;">
+              <li style="margin: 8px 0;">Detailed review of your business needs</li>
+              <li style="margin: 8px 0;">A direct response from our project managers</li>
+              <li style="margin: 8px 0;">Scheduling a completely free consultation call</li>
+              <li style="margin: 8px 0;">Proposing an AI-driven, highly optimized solution</li>
+            </ul>
           </div>
 
-          <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
-            <p style="color: #666;">Best regards,<br/><strong>The Nexiler Team</strong></p>
-            <p style="color: #999; font-size: 12px;">info@nexiler.tech | +92 307 2853163</p>
+          <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p style="color: #ffffff; font-size: 16px; margin-bottom: 5px;">Best regards,</p>
+            <p style="color: #a855f7; font-weight: bold; font-size: 18px; margin-top: 0;">The Nexiler Team</p>
+            <p style="color: #999999; font-size: 12px; margin-top: 15px;">info@nexiler.tech | +92 307 2853163</p>
+            <p style="color: #666666; font-size: 11px;">&copy; 2024 Nexiler. All rights reserved.</p>
           </div>
         </div>
       `,

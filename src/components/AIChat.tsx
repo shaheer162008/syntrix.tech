@@ -120,16 +120,16 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
     <>
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black/60 z-[10000] backdrop-blur-sm"
+        className="fixed inset-0 bg-[#1B1B1B]/50 z-[10000] backdrop-blur-sm"
         onClick={onClose}
       />
 
       {/* Chat Modal */}
       <div 
-        className="fixed inset-4 sm:bottom-6 sm:right-6 sm:left-auto sm:top-auto sm:w-[380px] md:w-[420px] sm:h-[500px] md:h-[550px] z-[10001] rounded-lg sm:rounded-xl md:rounded-[1.5rem] shadow-lg sm:shadow-2xl overflow-hidden flex flex-col font-sans"
+        className="fixed inset-4 sm:bottom-6 sm:right-6 sm:left-auto sm:top-auto sm:w-[380px] md:w-[420px] sm:h-[500px] md:h-[550px] z-[10001] rounded-[2rem] sm:rounded-[2rem] shadow-lg sm:shadow-2xl overflow-hidden flex flex-col font-sans"
         style={{
-          background: '#000',
-          border: '1px solid rgba(148,163,184,0.12)',
+          background: '#1B1B1B',
+          border: '1px solid rgba(168,85,247,0.2)',
           maxHeight: 'calc(100vh - 32px)',
         }}
       >
@@ -137,28 +137,28 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
         <div
           className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b font-mono"
           style={{
-            borderColor: 'rgba(148,163,184,0.08)',
-            background: 'transparent',
+            borderColor: 'rgba(255,255,255,0.1)',
+            background: '#1B1B1B',
           }}
         >
           <div>
             <div className="flex items-center gap-2 sm:gap-3 mb-1">
-              <div className="bg-white/6 p-2 sm:p-2.5 rounded-lg sm:rounded-xl flex items-center justify-center h-8 w-8 sm:h-9 sm:w-9">
+              <div className="bg-primary/20 p-2 sm:p-2.5 rounded-[2rem] flex items-center justify-center h-8 w-8 sm:h-9 sm:w-9">
                 <Image 
                   src="/icons/aichatbot.svg" 
                   alt="AI Chatbot" 
-                  width={20}
-                  height={20}
+                  width={40}
+                  height={40}
                   className="sm:w-[22px] sm:h-[22px]"
                 />
               </div>
-              <h3 className="text-white font-semibold text-base sm:text-lg tracking-tight font-mono">Nexiler</h3>
+              <h3 className="text-primary font-semibold text-base sm:text-lg tracking-tight font-mono">Nexiler</h3>
             </div>
             <p className="text-gray-400 text-[11px] sm:text-xs pl-10 sm:pl-12 font-mono">AI Assistant</p>
           </div>
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-white transition-colors p-1.5 sm:p-2 hover:bg-white/6 rounded-lg sm:rounded-xl"
+            className="text-gray-400 hover:text-white transition-colors p-1.5 sm:p-2 hover:bg-primary/20 rounded-[2rem]"
           >
             <FiX size={18} className="sm:w-[20px]" />
           </button>
@@ -168,7 +168,7 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
         <div
           className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 font-mono"
           style={{
-            background: 'transparent',
+            background: '#1B1B1B',
           }}
         >
           {messages.map((msg) => (
@@ -177,10 +177,10 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
               className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div
-                className={`max-w-[85%] px-4 sm:px-5 py-2.5 sm:py-3.5 rounded-lg sm:rounded-xl md:rounded-[2rem] text-sm sm:text-[15px] ${
+                className={`max-w-[85%] px-4 sm:px-5 py-2.5 sm:py-3.5 rounded-[2rem] text-sm sm:text-[15px] ${
                   msg.role === 'user'
-                    ? 'bg-white text-black border border-gray-200'
-                    : 'bg-[#0a0a0a] text-white border border-gray-600'
+                    ? 'bg-primary text-primary-foreground border border-primary/30'
+                    : 'bg-white/5 text-white border border-white/10'
                 }`}
                 style={{
                   wordBreak: 'break-word'
@@ -199,11 +199,11 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
           ))}
           {loading && (
             <div className="flex justify-start">
-              <div className="bg-[#0a0a0a] text-gray-400 border border-gray-600 px-4 sm:px-5 py-3 sm:py-4 rounded-lg sm:rounded-xl md:rounded-[2rem]">
+              <div className="bg-white/5 text-primary border border-white/10 px-4 sm:px-5 py-3 sm:py-4 rounded-[2rem]">
                 <div className="flex gap-1.5 items-center">
-                  <div className="w-[5px] h-[5px] sm:w-[6px] sm:h-[6px] bg-white rounded-full animate-bounce" />
-                  <div className="w-[5px] h-[5px] sm:w-[6px] sm:h-[6px] bg-white rounded-full animate-bounce" style={{ animationDelay: '0.15s' }} />
-                  <div className="w-[5px] h-[5px] sm:w-[6px] sm:h-[6px] bg-white rounded-full animate-bounce" style={{ animationDelay: '0.3s' }} />
+                  <div className="w-[5px] h-[5px] sm:w-[6px] sm:h-[6px] bg-primary rounded-full animate-bounce" />
+                  <div className="w-[5px] h-[5px] sm:w-[6px] sm:h-[6px] bg-primary rounded-full animate-bounce" style={{ animationDelay: '0.15s' }} />
+                  <div className="w-[5px] h-[5px] sm:w-[6px] sm:h-[6px] bg-primary rounded-full animate-bounce" style={{ animationDelay: '0.3s' }} />
                 </div>
               </div>
             </div>
@@ -212,7 +212,7 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
         </div>
 
         {/* Input Area */}
-        <div className="p-3 sm:p-4 border-t font-mono" style={{ borderColor: 'rgba(148,163,184,0.06)', background: '#050505' }}>
+        <div className="p-3 sm:p-4 border-t font-mono" style={{ borderColor: 'rgba(255,255,255,0.1)', background: '#1B1B1B' }}>
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -220,7 +220,7 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
             }}
             className="flex items-end gap-2 relative"
           >
-            <div className="flex-1 bg-transparent border border-gray-600 rounded-lg sm:rounded-xl md:rounded-[1.5rem] relative overflow-hidden focus-within:border-gray-400 transition-all">
+            <div className="flex-1 bg-white/5 border border-white/10 rounded-[2rem] relative overflow-hidden focus-within:border-primary/50 focus-within:bg-white/10 transition-all">
               <textarea
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
@@ -239,7 +239,7 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
             <button
               type="submit"
               disabled={loading || input.trim() === ''}
-              className="bg-white hover:bg-gray-100 text-black p-2.5 sm:p-3 rounded-lg sm:rounded-xl md:rounded-[1.5rem] disabled:opacity-50 transition-colors disabled:cursor-not-allowed flex-shrink-0 flex items-center justify-center h-[44px] w-[44px] sm:h-[48px] sm:w-[48px]"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground p-2.5 sm:p-3 rounded-[2rem] disabled:opacity-50 transition-colors disabled:cursor-not-allowed flex-shrink-0 flex items-center justify-center h-[44px] w-[44px] sm:h-[48px] sm:w-[48px]"
             >
               <FiSend size={18} className="sm:w-[20px]" />
             </button>
