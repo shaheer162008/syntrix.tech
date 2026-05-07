@@ -24,7 +24,14 @@ export default function Footer() {
               transition={{ duration: 0.5 }}
             >
               <Link href="/" className="inline-block group">
-                <span className="font-negan text-3xl sm:text-4xl font-extrabold lowercase tracking-wide text-primary">nexiler</span>
+                <Image 
+                  src="/nexiler-nav.png" 
+                  alt="Nexiler Logo" 
+                  width={180} 
+                  height={45} 
+                  className="object-contain transition-transform duration-300 hover:scale-[1.1]" 
+                  style={{ width: 'auto', height: '45px' }}
+                />
               </Link>
               <p className="mt-6 text-sm text-muted-foreground font-medium leading-relaxed max-w-sm">
                 Empowering businesses with intelligent automation, stunning websites, and relentless performance.
