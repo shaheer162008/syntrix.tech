@@ -25,15 +25,8 @@ export function AboutTeam() {
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tighter text-balance">
             Meet the Minds Behind <span className="text-primary">Nexiler</span>
           </h2>
-          <p className="max-w-3xl text-muted-foreground font-mono text-base leading-relaxed">
-            <strong className="text-white">How It Started</strong><br/><br/>
-            Before Nexiler, we were all working individually, freelancing, taking on projects solo, and doing our best to help clients one at a time. But <strong className="text-white">Muhammad Shaheer</strong>, our founder, had a bigger vision.
-            <br/><br/>
-            Since 2023, Shaheer dreamed of building a company that could help people internationally, a team that combines skills in web development, AI automation, SEO, and content creation to deliver complete solutions. Not just websites or apps, but real business growth.
-            <br/><br/>
-            In 2025, that vision became reality. <strong className="text-white">Muhammad Shaheer</strong>, <strong className="text-white">Muhammad Saim</strong>, and <strong className="text-white">Syed Muhammad Taha</strong> formed Team Nexiler. Now, instead of working alone, we work as one team with one goal: to grow your business and solve your problems.
-            <br/><br/>
-            Behind Nexiler is a founding team that leads with purpose. From strategy to execution, every decision is made together with a focus on quality, growth, and long-term impact for our clients.
+          <p className="max-w-2xl text-muted-foreground font-mono text-base">
+            Nexiler was founded by three passionate leaders who came together with a shared vision. Meet our founders who are committed to delivering intelligent automation and premium web solutions globally.
           </p>
         </motion.div>
 
