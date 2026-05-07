@@ -23,9 +23,7 @@ export async function POST(request: NextRequest) {
       html: `
         <div style="max-width: 600px; margin: 0 auto; background-color: #1B1B1B; color: #ffffff; padding: 40px; border-radius: 12px;">
           <div style="text-align: center; margin-bottom: 30px;">
-            <svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto;">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 42px; font-weight: 800; letter-spacing: -1px; fill: #a855f7; text-transform: lowercase;">nexiler</text>
-            </svg>
+            <img src="https://www.nexiler.tech/nexiler.png" alt="Nexiler Logo" style="max-width: 200px; height: auto; margin: 0 auto;" />
             <p style="color: #999999; font-size: 14px; margin-top: 10px;">New Contact Form Submission</p>
           </div>
           
@@ -54,9 +52,7 @@ export async function POST(request: NextRequest) {
       html: `
         <div style="max-width: 600px; margin: 0 auto; background-color: #1B1B1B; color: #ffffff; padding: 40px; border-radius: 12px;">
           <div style="text-align: center; margin-bottom: 30px;">
-            <svg width="220" height="55" viewBox="0 0 220 55" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto;">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 46px; font-weight: 800; letter-spacing: -1px; fill: #a855f7; text-transform: lowercase;">nexiler</text>
-            </svg>
+            <img src="https://www.nexiler.tech/nexiler.png" alt="Nexiler Logo" style="max-width: 220px; height: auto; margin: 0 auto;" />
             <p style="color: #999999; font-size: 16px; margin-top: 10px;">Intelligent Automation & Premium Web Development</p>
           </div>
           
