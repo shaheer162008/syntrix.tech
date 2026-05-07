@@ -72,7 +72,7 @@ export default function AboutUs() {
           </h2>
           <div className="bg-card/60 backdrop-blur-sm rounded-[2rem] p-5 sm:p-6">
             <p className="font-mono">
-              We build beautiful, modern interfaces with our comprehensive toolset. No setup, no configuration needed. Focus on your business while we handle the rest.
+              In 2025, that vision became reality. <strong className="text-white">Muhammad Shaheer</strong>, <strong className="text-white">Muhammad Saim</strong>, and <strong className="text-white">Syed Muhammad Taha</strong> formed Team Nexiler. Now, instead of working alone, we work as one team with one goal: to grow your business and solve your problems.
             </p>
           </div>
           <Button variant="link" className="px-0 pt-4 text-white text-base sm:text-lg tracking-tight font-semibold hover:text-white/80 transition-colors group">

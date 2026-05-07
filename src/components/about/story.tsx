@@ -27,7 +27,7 @@ export function AboutStory() {
           <div className="space-y-6 text-base sm:text-lg text-muted-foreground font-mono text-left leading-relaxed">
             <div className="bg-card/60 backdrop-blur-sm rounded-[2rem] p-5 sm:p-6">
               <p>
-                Before Nexiler, we were all working individually, freelancing, taking on projects solo, and doing our best to help clients one at a time. But Muhammad Shaheer, our founder, had a bigger vision.
+                Before Nexiler, we were all working individually, freelancing, taking on projects solo, and doing our best to help clients one at a time. But <strong className="text-white">Muhammad Shaheer</strong>, our founder, had a bigger vision.
               </p>
             </div>
             <div className="bg-card/60 backdrop-blur-sm rounded-[2rem] p-5 sm:p-6">
@@ -37,7 +37,7 @@ export function AboutStory() {
             </div>
             <div className="bg-card/60 backdrop-blur-sm rounded-[2rem] p-5 sm:p-6">
               <p>
-                In 2025, that vision became reality. Muhammad Shaheer and Muhammad Saim formed Team Nexiler. Now, instead of working alone, we work as one team with one goal: to grow your business and solve your problems.
+                In 2025, that vision became reality. <strong className="text-white">Muhammad Shaheer</strong>, <strong className="text-white">Muhammad Saim</strong>, and <strong className="text-white">Syed Muhammad Taha</strong> formed Team Nexiler. Now, instead of working alone, we work as one team with one goal: to grow your business and solve your problems.
               </p>
             </div>
             <div className="bg-card/60 backdrop-blur-sm rounded-[2rem] p-5 sm:p-6">
@@ -60,7 +60,7 @@ export function AboutStory() {
                 Founder's Note
               </div>
               <div className="italic text-muted-foreground leading-relaxed">
-                Muhammad Shaheer (Founder) and Muhammad Saim (Co-Founder) started Nexiler together. Everyone who joins becomes a partner in our mission, not just a team member. We share the same values, vision, and commitment to excellence.
+                <strong className="text-white">Muhammad Shaheer</strong> (Founder), <strong className="text-white">Muhammad Saim</strong> (Co-Founder), and <strong className="text-white">Syed Muhammad Taha</strong> (Co-Founder) started Nexiler together. Everyone who joins becomes a partner in our mission, not just a team member. We share the same values, vision, and commitment to excellence.
               </div>
             </div>
           </div>

@@ -25,8 +25,15 @@ export function AboutTeam() {
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tighter text-balance">
             Meet the Minds Behind <span className="text-primary">Nexiler</span>
           </h2>
-          <p className="max-w-2xl text-muted-foreground font-mono text-base">
-            Nexiler began with a shared vision. Our team came together to build something meaningful a company committed to delivering real results for clients across the globe.
+          <p className="max-w-3xl text-muted-foreground font-mono text-base leading-relaxed">
+            <strong className="text-white">How It Started</strong><br/><br/>
+            Before Nexiler, we were all working individually, freelancing, taking on projects solo, and doing our best to help clients one at a time. But <strong className="text-white">Muhammad Shaheer</strong>, our founder, had a bigger vision.
+            <br/><br/>
+            Since 2023, Shaheer dreamed of building a company that could help people internationally, a team that combines skills in web development, AI automation, SEO, and content creation to deliver complete solutions. Not just websites or apps, but real business growth.
+            <br/><br/>
+            In 2025, that vision became reality. <strong className="text-white">Muhammad Shaheer</strong>, <strong className="text-white">Muhammad Saim</strong>, and <strong className="text-white">Syed Muhammad Taha</strong> formed Team Nexiler. Now, instead of working alone, we work as one team with one goal: to grow your business and solve your problems.
+            <br/><br/>
+            Behind Nexiler is a founding team that leads with purpose. From strategy to execution, every decision is made together with a focus on quality, growth, and long-term impact for our clients.
           </p>
         </motion.div>
 
@@ -54,7 +61,7 @@ export function AboutTeam() {
                 </div>
                 <div className="flex justify-center">
                   <Link href={member.linkedin} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-background/70 px-5 py-2.5 text-sm font-semibold text-muted-foreground transition-colors hover:border-primary/30 hover:text-primary" target="_blank" aria-label={`LinkedIn profile of ${member.name}`}>
-                    <img src="/icons/linkedin.svg" alt="LinkedIn" className="w-4 h-4" />
+                    <img src="/icons/linkedin.svg" alt="LinkedIn" className="w-5 h-5" />
                     LinkedIn
                   </Link>
                 </div>
