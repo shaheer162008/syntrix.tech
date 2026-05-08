@@ -1,8 +1,8 @@
 export const companyConfig = {
   name: "nexiler",
-  address: "Karachi, Pakistan",
+  address: "Global",
   email: "info@nexiler.tech",
-  phone: "+923072853163",
+  phone: "+14057098512",
   logo: null, // Using custom font text instead
   socials: {
     linkedin: "https://linkedin.com/company/nexiler",

@@ -289,7 +289,7 @@ export default function TermsOfService() {
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10" />
               <h2 className="text-3xl font-extrabold tracking-tighter text-white mb-6">Global Services - Worldwide Reach</h2>
               <p className="text-foreground leading-relaxed mb-8 font-mono">
-                Nexiler operates as a global software development and digital services company. We serve clients from Pakistan, UAE, United States, United Kingdom, Canada, Australia, and beyond. These Terms of Service apply to all clients regardless of location.
+                Nexiler operates as a global software development and digital services company. We serve clients from UAE, United States, United Kingdom, Canada, Australia, and beyond. These Terms of Service apply to all clients regardless of location.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 font-mono">
