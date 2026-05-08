@@ -37,11 +37,13 @@ export default function Footer() {
                 Empowering businesses with intelligent automation, stunning websites, and relentless performance.
               </p>
               
-              <div className="mt-8">
-                <h4 className="text-base font-bold text-white mb-3 tracking-wide">Info</h4>
-                <div className="space-y-2">
-                  <p className="text-sm text-muted-foreground hover:text-white transition-colors">{companyConfig.address}</p>
+              <div className="mt-6 space-y-3">
+                <div className="flex items-center gap-3">
+                  <Image src="/icons/phone.svg" alt="Phone" width={16} height={16} className="opacity-60" />
                   <p className="text-sm text-muted-foreground hover:text-white transition-colors">{companyConfig.phone}</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Image src="/icons/email.svg" alt="Email" width={16} height={16} className="opacity-60" />
                   <p className="text-sm text-muted-foreground hover:text-white transition-colors">{companyConfig.email}</p>
                 </div>
               </div>
