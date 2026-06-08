@@ -73,7 +73,7 @@ export default function AboutUs() {
           <div className="bg-card/60 backdrop-blur-sm rounded-[2rem] p-5 sm:p-6">
             <div className="prose max-w-none text-sm text-foreground font-mono">
               <p>
-                Syntrix Solutions was founded by three partners <strong className="text-white">Muhammad Shaheer</strong>, <strong className="text-white">Muhammad Saim</strong>, and <strong className="text-white">Emroze Jawed</strong>, who came together with a shared vision to build something exceptional. Shaheer, driven by a passion for intelligent automation and premium digital experiences, joined forces with Saim and Emroze, both seasoned full stack developers who had already been collaborating as freelancers since 2023. Recognizing their combined strengths across automation, development, and client solutions, the trio formalized their partnership to create Syntrix Solutions, a firm dedicated to delivering high quality web and automation services to global clients.
+                Syntrix Solutions was founded by three partners <strong className="text-white">Muhammad Shaheer</strong>, <strong className="text-white">Muhammad Saim</strong>, and <strong className="text-white">Emroze Jawed</strong>, who came together with a shared vision to build something exceptional. The trio formalized their partnership to create Syntrix Solutions, a firm dedicated to delivering high quality web and automation services to global clients.
               </p>
             </div>
           </div>
