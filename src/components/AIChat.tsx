@@ -24,7 +24,7 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
     {
       id: '1',
       role: 'assistant',
-      content: "Hi! 👋 I'm the Nexiler AI Assistant. How can I help you today? Feel free to ask about our services, team, pricing, or anything else!",
+      content: "Hi! 👋 I'm the Syntrix Solutions AI Assistant. How can I help you today? Feel free to ask about our services, team, pricing, or anything else!",
       timestamp: new Date(),
     },
   ]);
@@ -105,7 +105,7 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: `Sorry, I encountered an error: ${errorText}. Please try again or contact us at info@nexiler.tech`,
+        content: `Sorry, I encountered an error: ${errorText}. Please try again or contact us at info@syntrixsolutions.tech`,
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, errorMessage]);
@@ -152,7 +152,7 @@ export default function AIChat({ isOpen, onClose }: { isOpen: boolean; onClose: 
                   className="sm:w-[22px] sm:h-[22px]"
                 />
               </div>
-              <h3 className="text-primary font-semibold text-base sm:text-lg tracking-tight font-mono">Nexiler</h3>
+              <h3 className="text-primary font-semibold text-base sm:text-lg tracking-tight font-mono">Syntrix Solutions</h3>
             </div>
             <p className="text-gray-400 text-[11px] sm:text-xs pl-10 sm:pl-12 font-mono">AI Assistant</p>
           </div>

@@ -96,8 +96,8 @@ export default function Hero(props: any) {
           <div className="flex lg:flex-1">
             <a href="/" className="-m-1.5 p-1.5 flex items-center gap-2 group">
               <Image 
-                src="/nexiler-nav.png" 
-                alt="Nexiler Logo" 
+                src="/syntrix-solutions-nav.png" 
+                alt="Syntrix Solutions Logo" 
                 width={160} 
                 height={40} 
                 className="object-contain transition-transform duration-300 hover:scale-[1.1]" 
@@ -139,8 +139,8 @@ export default function Hero(props: any) {
               <div className="flex items-center justify-between">
                 <a href="/" className="-m-1.5 p-1.5 flex items-center gap-2">     
                   <Image 
-                    src="/nexiler-nav.png" 
-                    alt="Nexiler Logo" 
+                    src="/syntrix-solutions-nav.png" 
+                    alt="Syntrix Solutions Logo" 
                     width={160} 
                     height={40} 
                     className="object-contain transition-transform duration-300 hover:scale-[1.1]" 

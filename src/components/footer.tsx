@@ -25,8 +25,8 @@ export default function Footer() {
             >
               <Link href="/" className="inline-block group">
                 <Image 
-                  src="/nexiler-nav.png" 
-                  alt="Nexiler Logo" 
+                  src="/syntrix-solutions-nav.png" 
+                  alt="Syntrix Solutions Logo" 
                   width={180} 
                   height={45} 
                   className="object-contain transition-transform duration-300 hover:scale-[1.1]" 

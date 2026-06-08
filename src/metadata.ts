@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 
 export const siteConfig = {
-  name: "Nexiler",
+  name: "Syntrix Solutions",
   description:
     "Empowering businesses with intelligent automation, stunning websites, and relentless performance. We build premium web applications, automate workflows with AI, and scale your digital presence.",
-  url: "https://nexiler.tech",
-  ogImage: "https://nexiler.tech/og-image.jpg",
+  url: "https://syntrixsolutions.tech",
+  ogImage: "https://syntrixsolutions.tech/syntrix-solutions.png",
   links: {
-    github: "#",
-    linkedin: "#",
-    facebook: "#",
-    instagram: "#",
-    email: "mailto:hello@nexiler.tech",
+    github: "https://github.com",
+    linkedin: "https://www.linkedin.com/company/syntrix-solutions",
+    facebook: "https://www.facebook.com",
+    instagram: "https://www.instagram.com/syntrix.solutions/",
+    email: "mailto:info@syntrixsolutions.tech",
   },
 };
 
@@ -35,7 +35,7 @@ export const keywords = [
   "chatbot development",
   "performance marketing",
   "brand identity",
-  "Nexiler",
+  "Syntrix Solutions",
   "software development company",
   "tech solutions",
   "digital transformation",
@@ -79,7 +79,7 @@ export const baseMetadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
-    creator: "@nexiler",
+    creator: "@syntrixsolutions",
   },
   robots: {
     index: true,
@@ -101,41 +101,41 @@ export const homeMetadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "Nexiler empowers businesses with intelligent automation, stunning websites, and relentless performance. Expert Next.js development, AI automation, SEO, and digital solutions.",
+    "Syntrix Solutions empowers businesses with intelligent automation, stunning websites, and relentless performance. Expert Next.js development, AI automation, SEO, and digital solutions.",
 };
 
 export const servicesMetadata: Metadata = {
   ...baseMetadata,
-  title: "Services | Nexiler",
+  title: "Services | Syntrix Solutions",
   description:
     "Smart services that move your business forward. Web design, workflow automation, organic growth, and AI systems built around your goals. Next.js, React, AI/ML, SEO.",
 };
 
 export const aboutMetadata: Metadata = {
   ...baseMetadata,
-  title: "About Us | Nexiler",
+  title: "About Us | Syntrix Solutions",
   description:
-    "Meet the team behind Nexiler. We're passionate about building honest partnerships that drive real results through advanced technology and intelligent automation.",
+    "Meet the team behind Syntrix Solutions. We're passionate about building honest partnerships that drive real results through advanced technology and intelligent automation.",
 };
 
 export const ourWorkMetadata: Metadata = {
   ...baseMetadata,
-  title: "Our Work | Nexiler",
+  title: "Our Work | Syntrix Solutions",
   description:
     "Explore our portfolio of successful projects. See how we've helped businesses transform with custom web applications, AI automation, and digital strategies.",
 };
 
 export const termsOfServiceMetadata: Metadata = {
   ...baseMetadata,
-  title: "Terms of Service | Nexiler",
+  title: "Terms of Service | Syntrix Solutions",
   description:
-    "Legal agreement and terms of service for Nexiler. Learn about our service scope, payment terms, intellectual property rights, and client responsibilities.",
+    "Legal agreement and terms of service for Syntrix Solutions. Learn about our service scope, payment terms, intellectual property rights, and client responsibilities.",
   keywords: [
     ...keywords,
     "terms of service",
     "legal agreement",
     "service terms",
-    "Nexiler terms",
+    "Syntrix Solutions terms",
     "service contract",
   ],
 };

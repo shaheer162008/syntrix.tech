@@ -5,7 +5,7 @@ import Footer from "@/components/footer";
 import { ServicesFaq } from "@/components/services/faq";
 
 export const metadata: Metadata = {
-  title: "Website Development - Nexiler",
+  title: "Website Development - Syntrix Solutions",
   description: "Custom website development services built with modern technologies like Next.js, React, and full-stack solutions that drive real business growth.",
 };
 

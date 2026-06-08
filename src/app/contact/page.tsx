@@ -5,8 +5,8 @@ import Footer from "@/components/footer";
 import { GridBackground } from "@/components/ui/grid-background";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Nexiler",
-  description: "Get in touch with Nexiler for web development, AI automation, and digital growth solutions.",
+  title: "Contact Us - Syntrix Solutions",
+  description: "Get in touch with Syntrix Solutions for web development, AI automation, and digital growth solutions.",
 };
 
 export default function ContactPage() {

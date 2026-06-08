@@ -5,8 +5,8 @@ import Footer from "@/components/footer";
 import { ServicesFaq } from "@/components/services/faq";
 
 export const metadata: Metadata = {
-  title: "AI Automation - Nexiler",
-  description: "Transform your business with AI automation, chatbot integration, and intelligent workflows that save time and boost productivity.",
+  title: "AI Automation - Syntrix Solutions",
+  description: "Automate business workflows, integrate APIs, and reduce overhead with intelligent automation solutions.",
 };
 
 export default function AIAutomationPage() {

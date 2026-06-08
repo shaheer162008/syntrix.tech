@@ -5,7 +5,7 @@ import Footer from "@/components/footer";
 import { ServicesFaq } from "@/components/services/faq";
 
 export const metadata: Metadata = {
-  title: "SEO Services - Nexiler",
+  title: "SEO Services - Syntrix Solutions",
   description: "Boost your organic visibility with technical SEO, content optimization, and data-driven strategies that drive qualified traffic.",
 };
 

@@ -9,8 +9,8 @@ export function FloatingButtons() {
   const [isHovered, setIsHovered] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
 
-  const callPhone = "+14057098512";
-  const callUrl = `tel:${callPhone}`;
+  const whatsappNumber = "923072853163";
+  const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
   return (
     <>
@@ -53,22 +53,24 @@ export function FloatingButtons() {
           </AnimatePresence>
         </motion.div>
 
-        {/* Call Button */}
+        {/* WhatsApp Button */}
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1.2, type: "spring", stiffness: 260, damping: 20 }}
-          whileHover={{ scale: 1.1 }}
+          transition={{ delay: 1.4, type: "spring", stiffness: 260, damping: 20 }}
+          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           <a
-            href={callUrl}
+            href={whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
             className="w-14 h-14 rounded-full bg-[#1B1B1B] hover:bg-[#1B1B1B] flex items-center justify-center shadow-lg hover:shadow-xl transition-all border-2 border-gray-600"
-            aria-label="Call Nexiler"
+            aria-label="WhatsApp Syntrix Solutions"
           >
             <Image 
-              src="/icons/phone.svg" 
-              alt="Call" 
+              src="/icons/whatsapp.svg" 
+              alt="WhatsApp" 
               width={28} 
               height={28}
             />

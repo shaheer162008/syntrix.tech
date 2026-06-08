@@ -1,11 +1,11 @@
 import { teamMembers } from './team';
 
 export const aiConfig = {
-  companyName: 'Nexiler',
-  companyDescription: 'Nexiler is a premium global tech agency serving clients worldwide. We specialize in advanced Next.js website development, complete brand creation, AI automation, AI chatbots, search engine optimization (SEO), and highly engaging motion graphics.',
+  companyName: 'Syntrix Solutions',
+  companyDescription: 'Syntrix Solutions is a premium global tech agency serving clients worldwide. We specialize in advanced Next.js website development, complete brand creation, AI automation, AI chatbots, search engine optimization (SEO), and highly engaging motion graphics.',
   location: 'Serving Globally',
-  email: 'info@nexiler.tech',
-  phone: '+1 (405) 709-8512',
+  email: 'info@syntrixsolutions.tech',
+  phone: '+923072853163',
   
   services: [
     {
@@ -97,23 +97,23 @@ export const aiConfig = {
   ],
 
   whyChooseUs: [
-    'Premium Quality Over Volume: We only build high-end, scalable digital real estate.',
-    'AI-First Approach: Using automation to make your business autonomous and efficient.',
+    'Premium Quality Over Volume: We only build high end, scalable digital real estate.',
+    'AI First Approach: Using automation to make your business autonomous and efficient.',
     'Global Reach: Our systems handle traffic and operations continuously, worldwide.',
-    'Founders Involvement: You communicate directly with top-tier engineers constantly, no middle-men.'
+    'Founders Involvement: You communicate directly with top tier engineers constantly, no middle men.'
   ],
 
-  systemPrompt: `You are Nexiler's core AI assistant. Nexiler is a highly premium technology agency serving globally.
-Your task is to warmly and professionally assist website visitors, convert them into leads, and provide deep insights about Nexiler's capabilities.
-Always present Nexiler as an elite, high-end agency. 
+  systemPrompt: `You are Syntrix Solutions' core AI assistant. Syntrix Solutions is a highly premium technology agency serving globally.
+Your task is to warmly and professionally assist website visitors, convert them into leads, and provide deep insights about Syntrix Solutions' capabilities.
+Always present Syntrix Solutions as an elite, high-end agency. 
 
 Information you possess:
-- Nexiler provides 9 core services: Website Development, AI Automation, AI Chatbots, Content Creation, SEO Services, Social Media Management, Mobile App Development, Motion Graphics, Full Brand Creation.
-- Nexiler was founded by Muhammad Shaheer (Founder & CEO), with co-founders Muhammad Saim and Syed Muhammad Taha.
-- Nexiler has satisfied over 50+ global clients.
+- Syntrix Solutions provides 9 core services: Website Development, AI Automation, AI Chatbots, Content Creation, SEO Services, Social Media Management, Mobile App Development, Motion Graphics, Full Brand Creation.
+- Syntrix Solutions was founded by Muhammad Shaheer, Muhammad Saim, and Emroze Jawed.
+- Syntrix Solutions has satisfied over 50+ global clients.
 - If asked about pricing, DO NOT give direct numbers. Explain that every project is uniquely scoped to provide maximum ROI, and suggest they book a free consultation for an exact quote.
 - Our primary tech stack: Next.js 15, React 19, TailwindCSS, Framer Motion, Node.js.
-- Contact: Email (info@nexiler.tech) or Phone (+1 (405) 709-8512). Encourage users to use the contact page.
+- Contact: Email (info@syntrixsolutions.tech) or Phone (+1 (405) 709-8512). Encourage users to use the contact page.
 - Location: Serving Globally.
 - Tone: Extremely professional, slightly tech-savvy, polite, and conversion-focused. Be crisp, concise (do not write massive walls of text unless asked).
 - Use Markdown **bolding** to emphasize our services or unique traits.`,
@@ -122,13 +122,12 @@ Information you possess:
 export const getSystemContext = () => {
   return `${aiConfig.systemPrompt}
 
-**Nexiler Master Database:**
+**Syntrix Solutions Master Database:**
 - Name: ${aiConfig.companyName}
 - Tagline: ${aiConfig.companyDescription}
 - Operations: ${aiConfig.location}
 - Direct Lines: ${aiConfig.email} | ${aiConfig.phone}
-- Founder: ${aiConfig.team[0].name} (${aiConfig.team[0].role})
-- Co-Founders: ${aiConfig.team[1].name}, ${aiConfig.team[2].name}
+- Partners: ${aiConfig.team.map(t => t.name).join(', ')}
 
 **Detailed Services List:**
 ${aiConfig.services.map(s => `- ${s.name}: ${s.description}`).join('\n')}

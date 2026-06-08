@@ -5,7 +5,7 @@ import Footer from "@/components/footer";
 import { ServicesFaq } from "@/components/services/faq";
 
 export const metadata: Metadata = {
-  title: "Mobile App Development - Nexiler",
+  title: "Mobile App Development - Syntrix Solutions",
   description: "Native and cross-platform mobile apps for seamless iOS and Android experiences that engage users.",
 };
 

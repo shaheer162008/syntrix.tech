@@ -5,7 +5,7 @@ import Footer from "@/components/footer";
 import { ServicesFaq } from "@/components/services/faq";
 
 export const metadata: Metadata = {
-  title: "Motion Graphics - Nexiler",
+  title: "Motion Graphics - Syntrix Solutions",
   description: "Engaging video editing and dynamic animations that tell your brand story and captivate your audience.",
 };
 

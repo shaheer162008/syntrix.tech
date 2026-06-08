@@ -5,7 +5,7 @@ import Footer from "@/components/footer";
 import { ServicesFaq } from "@/components/services/faq";
 
 export const metadata: Metadata = {
-  title: "AI Chatbots - Nexiler",
+  title: "AI Chatbots - Syntrix Solutions",
   description: "Integrate intelligent AI chatbots for 24/7 customer support and automated lead generation.",
 };
 

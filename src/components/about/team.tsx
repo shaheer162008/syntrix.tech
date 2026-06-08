@@ -18,15 +18,15 @@ export function AboutTeam() {
           <div className="inline-flex items-center gap-2 mb-2 px-4 py-1.5 rounded-full bg-secondary/30 border border-white/10 backdrop-blur-md">
             <span className="w-2 h-2 rounded-full border border-primary" />
             <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground font-sans">
-              The Leadership
+              Our Partners
             </span>
           </div>
 
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tighter text-balance">
-            Meet the Minds Behind <span className="text-primary">Nexiler</span>
+            Meet the Minds Behind <span className="text-primary">Syntrix Solutions</span>
           </h2>
           <p className="max-w-2xl text-muted-foreground font-mono text-base">
-            Nexiler was founded by three passionate leaders who came together with a shared vision. Meet our founders who are committed to delivering intelligent automation and premium web solutions globally.
+            Syntrix Solutions is partnership-based. Meet our partners who jointly guide the company's vision and deliver intelligent automation and premium web solutions globally.
           </p>
         </motion.div>
 

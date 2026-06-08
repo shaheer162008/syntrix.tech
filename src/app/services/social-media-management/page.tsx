@@ -5,7 +5,7 @@ import Footer from "@/components/footer";
 import { ServicesFaq } from "@/components/services/faq";
 
 export const metadata: Metadata = {
-  title: "Social Media Management - Nexiler",
+  title: "Social Media Management - Syntrix Solutions",
   description: "Grow your brand organically with social media strategies, content calendars, and engagement-driven campaigns.",
 };
 

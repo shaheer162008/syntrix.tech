@@ -5,7 +5,7 @@ import Footer from "@/components/footer";
 import { ServicesFaq } from "@/components/services/faq";
 
 export const metadata: Metadata = {
-  title: "Full Brand Creation - Nexiler",
+  title: "Full Brand Creation - Syntrix Solutions",
   description: "Stand out with a modern, cohesive brand identity and professional logo design that resonates with your audience.",
 };
 

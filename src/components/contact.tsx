@@ -12,14 +12,17 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [toastType, setToastType] = useState<"success" | "error">("success");
 
   // Auto-hide toast after 5 seconds
   useEffect(() => {
     if (showToast) {
-      const timer = setTimeout(() => setShowToast(false), 5000);
+      const timeout = toastType === 'success' ? 5000 : 20000; // keep errors visible longer
+      const timer = setTimeout(() => setShowToast(false), timeout);
       return () => clearTimeout(timer);
     }
-  }, [showToast]);
+  }, [showToast, toastType]);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -36,21 +39,36 @@ export default function Contact() {
     };
 
     try {
+      const start = Date.now();
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
+      const duration = Date.now() - start;
+      console.log('Contact form response status:', response.status, 'duration(ms):', duration);
+      let responseBody: any = null;
+      try { responseBody = await response.clone().json(); } catch (e) { responseBody = await response.text(); }
+      console.log('Contact form response body:', responseBody);
 
       if (response.ok) {
         setSubmitStatus("success");
+        setToastType('success');
+        setToastMessage(responseBody?.message || 'We\'ve received your message and will contact you shortly.');
         setShowToast(true);
         (e.target as HTMLFormElement).reset();
       } else {
         setSubmitStatus("error");
+        setToastType('error');
+        setToastMessage(responseBody?.error || 'Failed to send message. Please try again.');
+        setShowToast(true);
       }
     } catch (error) {
+      console.error('Contact submit error:', error);
       setSubmitStatus("error");
+      setToastType('error');
+      setToastMessage('Network error. Please check your connection and try again.');
+      setShowToast(true);
     } finally {
       setIsSubmitting(false);
     }
@@ -233,9 +251,9 @@ export default function Contact() {
               <CheckCircle2 className="w-6 h-6 text-green-400" />
             </div>
             <div className="flex-1 pr-6 pt-1">
-              <h4 className="text-lg font-bold text-white mb-1.5">Message Sent!</h4>
+              <h4 className="text-lg font-bold text-white mb-1.5">{toastType === 'success' ? 'Message Sent!' : 'Error'}</h4>
               <p className="text-sm text-muted-foreground font-mono">
-                We've received your message and will contact you shortly.
+                {toastMessage ?? (toastType === 'success' ? "We've received your message and will contact you shortly." : 'Something went wrong.')}
               </p>
             </div>
             <button
