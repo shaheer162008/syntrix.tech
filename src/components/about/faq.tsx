@@ -6,7 +6,7 @@ export function AboutFaq() {
   const faqs = [
     {
       question: "Are you a single freelancer or a team?",
-      answer: "We are a united team. Muhammad Shaheer started with a vision to bring together experts, and since 2025, we operate as one cohesive company. Everyone in the team is considered a co-founder.",
+      answer: "We are a united team. We have three partners who bring together a powerful combination of skills in intelligent automation, premium web development, and client solutions. We are not just freelancers, we are a dedicated agency focused on delivering high quality services to our clients.",
     },
     {
       question: "What is your main focus?",

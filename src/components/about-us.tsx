@@ -15,12 +15,12 @@ export default function AboutUs() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2 relative z-10">
         {/* LEFT: Text */}
         <div 
-          className="relative mx-auto flex h-[30rem] sm:h-[40rem] w-full max-w-[60rem] items-center justify-center overflow-hidden rounded-[2.5rem] sm:rounded-[3rem] border border-white/10 isolate bg-card/80 backdrop-blur-md shadow-[0_18px_70px_rgba(0,0,0,0.2)]"
+          className="relative mx-auto flex h-120 sm:h-160 w-full max-w-240 items-center justify-center overflow-hidden rounded-[2.5rem] sm:rounded-[3rem] border border-white/10 isolate bg-card/80 backdrop-blur-md shadow-[0_18px_70px_rgba(0,0,0,0.2)]"
         >
           <BackgroundGradientAnimation>
             <div className="absolute z-50 inset-0 flex items-center justify-center pointer-events-none">
               {/* Inner card hovering above the gradient */}
-              <Card className="w-[90%] sm:w-85 z-10 rounded-[2rem] border border-primary/20 bg-[#0a0512]/90 shadow-[0_0_30px_-5px_rgba(168,85,247,0.2)] bg-gradient-to-b from-primary/5 to-transparent shadow-2xl backdrop-blur-xl pointer-events-auto">
+              <Card className="w-[90%] sm:w-85 z-10 rounded-[2rem] border border-primary/20 bg-[#0a0512]/90 shadow-[0_0_30px_-5px_rgba(168,85,247,0.2)] bg-linear-to-b from-primary/5 to-transparent backdrop-blur-xl pointer-events-auto">
             <CardContent className="p-6 font-sans">
               <div className="mb-4 flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -60,7 +60,7 @@ export default function AboutUs() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1B1B1B] border border-white/10 backdrop-blur-md mb-2"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black border border-white/10 backdrop-blur-md mb-2"
           >
             <span className="w-2 h-2 rounded-full bg-purple-400 animate-[pulse_2s_ease-in-out_infinite]" />
             <span className="text-xs font-semibold uppercase tracking-wider text-primary font-sans">
@@ -73,31 +73,7 @@ export default function AboutUs() {
           <div className="bg-card/60 backdrop-blur-sm rounded-[2rem] p-5 sm:p-6">
             <div className="prose max-w-none text-sm text-foreground font-mono">
               <p>
-                Before Syntrix Solutions, we were all working individually, freelancing, taking on projects solo, and doing our best to help clients one at a time. But <strong className="text-white">Muhammad Shaheer</strong> had a bigger vision.
-              </p>
-
-              <p>
-                Since 2023, Shaheer dreamed of building a company that could help people internationally, a team that combines skills in web development, AI automation, SEO and content creation to deliver complete solutions. Not just websites or apps, but real business growth.
-              </p>
-
-              <p>
-                In 2025, that vision became reality. <strong className="text-white">Muhammad Shaheer</strong>, <strong className="text-white">Muhammad Saim</strong>, and <strong className="text-white">Syed Muhammad Taha</strong> formed Syntrix Solutions. Now, instead of working alone, we work as one team with one goal: to grow your business and solve your problems.
-              </p>
-
-              <p>
-                Behind Syntrix Solutions is a founding team that leads with purpose. From strategy to execution, every decision is made together with a focus on quality, growth and long term impact for our clients.
-              </p>
-
-              <p>
-                Our mission is simple: provide solutions that actually work and save you time. We handle the tech so you can focus on what you do best.
-              </p>
-
-              <p>
-                We are not here just to make money. We want to solve real problems and help clients reach meaningful outcomes and grow the way they envision. We focus on lasting impact, honest advice and building tools that make work easier for people.
-              </p>
-
-              <p>
-                <strong>Founders note</strong>: <strong className="text-white">Muhammad Shaheer</strong>, <strong className="text-white">Muhammad Saim</strong> and <strong className="text-white">Syed Muhammad Taha</strong> started Syntrix Solutions together. Everyone who joins becomes a partner in our mission, not just a team member. We share the same values, vision and commitment to excellence.
+                Syntrix Solutions was founded by three partners <strong className="text-white">Muhammad Shaheer</strong>, <strong className="text-white">Muhammad Saim</strong>, and <strong className="text-white">Emroze Jawed</strong>, who came together with a shared vision to build something exceptional. Shaheer, driven by a passion for intelligent automation and premium digital experiences, joined forces with Saim and Emroze, both seasoned full stack developers who had already been collaborating as freelancers since 2023. Recognizing their combined strengths across automation, development, and client solutions, the trio formalized their partnership to create Syntrix Solutions, a firm dedicated to delivering high quality web and automation services to global clients.
               </p>
             </div>
           </div>

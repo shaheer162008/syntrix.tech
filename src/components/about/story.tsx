@@ -25,43 +25,10 @@ export function AboutStory() {
           </h2>
 
           <div className="space-y-6 text-base sm:text-lg text-muted-foreground font-mono text-left leading-relaxed">
-              <div className="bg-card/60 backdrop-blur-sm rounded-[2rem] p-5 sm:p-6">
-              <p>
-                Before Syntrix Solutions, we were all working individually, freelancing, taking on projects solo, and doing our best to help clients one at a time. But <strong className="text-white">Muhammad Shaheer</strong> had a bigger vision.
-              </p>
-            </div>
             <div className="bg-card/60 backdrop-blur-sm rounded-[2rem] p-5 sm:p-6">
               <p>
-                Since 2023, Shaheer dreamed of building a company that could help people internationally, a team that combines skills in web development, AI automation, SEO, and content creation to deliver complete solutions. Not just websites or apps, but real business growth.
+                Syntrix Solutions was founded by three partners <strong className="text-white">Muhammad Shaheer</strong>, <strong className="text-white">Muhammad Saim</strong>, and <strong className="text-white">Emroze Jawed</strong>, who came together with a shared vision to build something exceptional. Shaheer, driven by a passion for intelligent automation and premium digital experiences, joined forces with Saim and Emroze, both seasoned full stack developers who had already been collaborating as freelancers since 2023. Recognizing their combined strengths across automation, development, and client solutions, the trio formalized their partnership to create Syntrix Solutions, a firm dedicated to delivering high quality web and automation services to global clients.
               </p>
-            </div>
-            <div className="bg-card/60 backdrop-blur-sm rounded-[2rem] p-5 sm:p-6">
-              <p>
-                In 2025, that vision became reality. <strong className="text-white">Muhammad Shaheer</strong>, <strong className="text-white">Muhammad Saim</strong>, and <strong className="text-white">Emroze Jawed</strong> formed Syntrix Solutions. Now, instead of working alone, we work as one team with one goal: to grow your business and solve your problems.
-              </p>
-            </div>
-            <div className="bg-card/60 backdrop-blur-sm rounded-[2rem] p-5 sm:p-6">
-              <p>
-                Behind Syntrix Solutions is a founding team that leads with purpose. From strategy to execution, every decision is made together with a focus on quality, growth and long term impact for our clients.
-              </p>
-            </div>
-            <div className="bg-card/60 backdrop-blur-sm rounded-[2rem] p-5 sm:p-6">
-              <p>
-                Our mission is simple: provide solutions that actually work and save you time. We handle the tech so you can focus on what you do best.
-              </p>
-            </div>
-            <div className="bg-card/60 backdrop-blur-sm rounded-[2rem] p-5 sm:p-6">
-              <p>
-                We are not here just to make money. We want to solve real problems and help clients reach meaningful outcomes and grow the way they envision. We focus on lasting impact, honest advice, and building tools that make work easier for people.
-              </p>
-            </div>
-            <div className="mt-8 rounded-[2rem] border border-white/10 bg-card/80 p-5 shadow-[0_16px_60px_rgba(0,0,0,0.16)] backdrop-blur-md font-sans text-sm text-foreground">
-              <div className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-                Founders note
-              </div>
-              <div className="italic text-muted-foreground leading-relaxed">
-                <strong className="text-white">Muhammad Shaheer</strong>, <strong className="text-white">Muhammad Saim</strong> and <strong className="text-white">Emroze Jawed</strong> started Syntrix Solutions together. Everyone who joins becomes a partner in our mission, not just a team member. We share the same values, vision and commitment to excellence.
-              </div>
             </div>
           </div>
         </motion.div>
