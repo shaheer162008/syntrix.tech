@@ -1,10 +1,10 @@
-# Nexiler - Brand Kit & Design System
+# Syntrix Solutions - Brand Kit & Design System
 
 ## Colors
 
 ### 1. Primary Accent (Purple)
 **Hex:** `#a855f7`
-- Used for: Brand Logo ("nexiler"), Call to action buttons, prominent text highlights, icon borders, and main hover states.
+-- Used for: Brand Logo ("Syntrix Solutions"), Call to action buttons, prominent text highlights, icon borders, and main hover states.
 - Ensures the premium touch and visually strikes a contrast against dark backgrounds.
 
 ### 2. Background Base (Dark Grey)
@@ -24,3 +24,4 @@
 - **Primary Font:** Geist Sans (system-ui, sans-serif)
 - **Code & Tech Specs:** Geist Mono (ui-monospace)
 - **Logo Font Mapping:** The logo strictly uses `.font-negan` mapped in CSS.
+"# syntrix.tech" 
